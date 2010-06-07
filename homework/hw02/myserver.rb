@@ -2,23 +2,26 @@
 
 Author: Charu Jain
 Homework2: myserver.rb
-Date: 06/03/2010
-
+Description:
 * awaits a connection over port 8888
 * if text that is sent is "t" or "time", then, the server responds with time of day
 * if text that is sent is "f" or "message/fortune", then the server responds with a fortune
 * if the text that is sent is d followed by a filename (e.g. dtest.txt) then respond with that file
+Usage: ruby myserver.rb
+       Run myclient.rb to send the text. 
 =end
 
 
 require 'gserver'
 
+#List of fortunes
 FORTUNES = ["You will learn a lot", "You will get an 'A'", 
             "You still have much to learn, Grasshopper"]
-
+#List of Jokes
 JOKES = [" Q. Where do you find a one legged dog? A. Where you left it.", 
          "Two muffins are in the oven. One says to the other \"God it's hot in here\" The other one replies \"Oh no... It's a talking muffin\""] 
 
+		 
 class MyServer < GServer
 
   def initialize(*args)
@@ -27,7 +30,7 @@ class MyServer < GServer
   end
   
   def serve(io_object)
-    # To keep a track of number of client connections
+    # To keep a track of number of client connections, assigns the incoming connection an id
     @@client_id += 1
     my_client_id = @@client_id
     io_object.sync = true
@@ -36,32 +39,29 @@ class MyServer < GServer
     loop do
       # Received line from client
       line = io_object.readline.chomp
-       puts line
+      puts line
 
       # Compare the line to various cases
       case line
-      when /^t/ || 'time'
-          io_object.puts "The time of day is #{Time.now}"
       
-      when "quit"
-        puts "Exiting!"
-        break
+	  #Regex is used to match 't' or 'time'
+	   when /^(t|time)$/
+	  #Time is displayed
+          io_object.puts "The time now is#{Time.now.strftime(" %I:%M %p")}"
       
-      when /^f/ 
+	  #/^ and $ will only match the enclosed string, i.e f or message/fortune
+      when /^(f|message\/fortune)$/ 
+	  #A fortune is displayed
         io_object.puts FORTUNES[FORTUNES.length * rand]
-            
-      when "date"
+      
+      #'d' should not be matched to the following regex, so used ^ and $
+      when /^date$/
         io_object.puts "Today date is #{Time.now.month}-#{Time.now.day}-#{Time.now.year}"
       
-      when "message/fortune" 
-        io_object.puts FORTUNES[FORTUNES.length * rand]
-            
-      when "joke"
+      #Return a joke      
+      when /^(joke|message\/joke)$/
          io_object.puts JOKES[JOKES.length * rand]
-      
-      when "message/joke" 
-        io_object.puts JOKES[JOKES.length * rand]
-        
+                    
       # Get the file name removing 'd'
       when /^d(.+)/
         file = $1
@@ -75,7 +75,10 @@ class MyServer < GServer
         else
           io_object.puts "File {file} doesn't exists"
         end
-           
+	  # Quit the server
+	  when "quit"
+        puts "Exiting!"
+        break    
       # If input from client doesn't match any of the above case           
       else
         puts "received line #{line}"
