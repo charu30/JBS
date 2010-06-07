@@ -88,9 +88,9 @@ def parse(expression)
  
 #Input a postfix expression
 exp = ARGV
-parts = exp[0].split(" ")
+exp = ARGV[0].split(" ")
 c = Postfix_to_Infix.new
-infix = c.parse(parts)
+infix = c.parse(exp)
 puts infix
 
  
