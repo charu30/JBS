@@ -1,0 +1,866 @@
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateFriends (20100608112411)
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "friends" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "since" varchar(255), "comment" varchar(255), "group" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100608112411')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("friends")[0m
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 07:25:13) [GET]
+  [4;36;1mFriend Load (2.0ms)[0m   [0;1mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+Completed in 597ms (View: 583, DB: 2) | 200 OK [http://localhost/friends]
+
+
+Processing FriendsController#new (for 127.0.0.1 at 2010-06-08 07:25:17) [GET]
+Rendering template within layouts/friends
+Rendering friends/new
+Completed in 106ms (View: 93, DB: 0) | 200 OK [http://localhost/friends/new]
+
+
+Processing FriendsController#create (for 127.0.0.1 at 2010-06-08 07:25:37) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"PYiM5eQZhe1H75qn/GCO5uWW3o391qTamqiyRplyaxk=", "friend"=>{"name"=>"Deepali", "since"=>"15 yrs", "group"=>"First School", "comment"=>"childhood friend"}}
+  [4;35;1mFriend Create (2.0ms)[0m   [0mINSERT INTO "friends" ("name", "updated_at", "since", "comment", "group", "created_at") VALUES('Deepali', '2010-06-08 11:25:37', '15 yrs', 'childhood friend', 'First School', '2010-06-08 11:25:37')[0m
+Redirected to http://localhost:3000/friends/1
+Completed in 35ms (DB: 2) | 302 Found [http://localhost/friends]
+
+
+Processing FriendsController#show (for 127.0.0.1 at 2010-06-08 07:25:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mFriend Load (0.0ms)[0m   [0;1mSELECT * FROM "friends" WHERE ("friends"."id" = 1) [0m
+Rendering template within layouts/friends
+Rendering friends/show
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/friends/1]
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 07:25:43) [GET]
+  [4;35;1mFriend Load (1.0ms)[0m   [0mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+Completed in 26ms (View: 12, DB: 1) | 200 OK [http://localhost/friends]
+
+
+Processing FriendsController#new (for 127.0.0.1 at 2010-06-08 07:25:46) [GET]
+Rendering template within layouts/friends
+Rendering friends/new
+Completed in 32ms (View: 17, DB: 0) | 200 OK [http://localhost/friends/new]
+
+
+Processing FriendsController#create (for 127.0.0.1 at 2010-06-08 07:26:17) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"PYiM5eQZhe1H75qn/GCO5uWW3o391qTamqiyRplyaxk=", "friend"=>{"name"=>"Kanika", "since"=>"7", "group"=>"Ramjas ", "comment"=>""}}
+  [4;36;1mFriend Create (1.0ms)[0m   [0;1mINSERT INTO "friends" ("name", "updated_at", "since", "comment", "group", "created_at") VALUES('Kanika', '2010-06-08 11:26:17', '7', '', 'Ramjas ', '2010-06-08 11:26:17')[0m
+Redirected to http://localhost:3000/friends/2
+Completed in 62ms (DB: 1) | 302 Found [http://localhost/friends]
+
+
+Processing FriendsController#show (for 127.0.0.1 at 2010-06-08 07:26:18) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mFriend Load (1.0ms)[0m   [0mSELECT * FROM "friends" WHERE ("friends"."id" = 2) [0m
+Rendering template within layouts/friends
+Rendering friends/show
+Completed in 22ms (View: 7, DB: 1) | 200 OK [http://localhost/friends/2]
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 07:26:47) [GET]
+  [4;36;1mFriend Load (1.0ms)[0m   [0;1mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+Completed in 27ms (View: 13, DB: 1) | 200 OK [http://localhost/friends]
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 07:37:21) [GET]
+  [4;35;1mFriend Load (1.0ms)[0m   [0mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+Completed in 36ms (View: 22, DB: 1) | 200 OK [http://localhost/friends]
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 07:37:53) [GET]
+  [4;36;1mFriend Load (2.0ms)[0m   [0;1mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+Completed in 112ms (View: 99, DB: 2) | 200 OK [http://localhost/friends]
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 07:41:44) [GET]
+  [4;35;1mFriend Load (0.0ms)[0m   [0mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/friends]
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 07:41:55) [GET]
+  [4;36;1mFriend Load (0.0ms)[0m   [0;1mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/friends]
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:22:17) [GET]
+  [4;35;1mFriend Load (2.0ms)[0m   [0mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+
+ActionView::TemplateError (undefined method `group' for nil:NilClass) on line #27 of app/views/friends/index.html.erb:
+24: Friends in Ramjas School
+25: 
+26: <% @friends.each do |friend| %>
+27:   <% if @friend.group=='Ramjas School' %>
+28: 	<tr>
+29:     <td><%=h friend.name %></td>
+30:     <td><%=h friend.since %></td>
+
+    app/views/friends/index.html.erb:27
+    app/views/friends/index.html.erb:26:in `each'
+    app/views/friends/index.html.erb:26
+    app/controllers/friends_controller.rb:7:in `index'
+
+Rendered rescues/_trace (274.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-08 09:22:26) [GET]
+
+ActionController::RoutingError (No route matches "/friend" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:22:30) [GET]
+  [4;36;1mFriend Load (1.0ms)[0m   [0;1mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+
+ActionView::TemplateError (undefined method `group' for nil:NilClass) on line #27 of app/views/friends/index.html.erb:
+24: Friends in Ramjas School
+25: 
+26: <% @friends.each do |friend| %>
+27:   <% if @friend.group=='Ramjas School' %>
+28: 	<tr>
+29:     <td><%=h friend.name %></td>
+30:     <td><%=h friend.since %></td>
+
+    app/views/friends/index.html.erb:27
+    app/views/friends/index.html.erb:26:in `each'
+    app/views/friends/index.html.erb:26
+    app/controllers/friends_controller.rb:7:in `index'
+
+Rendered rescues/_trace (189.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:22:54) [GET]
+  [4;35;1mFriend Load (2.0ms)[0m   [0mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+Completed in 37ms (View: 23, DB: 2) | 200 OK [http://localhost/friends]
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:23:18) [GET]
+  [4;36;1mFriend Load (1.0ms)[0m   [0;1mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+Completed in 37ms (View: 24, DB: 1) | 200 OK [http://localhost/friends]
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:23:22) [GET]
+  [4;35;1mFriend Load (1.0ms)[0m   [0mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+Completed in 27ms (View: 14, DB: 1) | 200 OK [http://localhost/friends]
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:23:25) [GET]
+  [4;36;1mFriend Load (1.0ms)[0m   [0;1mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+Completed in 34ms (View: 17, DB: 1) | 200 OK [http://localhost/friends]
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:25:14) [GET]
+  [4;35;1mFriend Load (2.0ms)[0m   [0mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+Completed in 114ms (View: 100, DB: 2) | 200 OK [http://localhost/friends]
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:25:16) [GET]
+  [4;36;1mFriend Load (1.0ms)[0m   [0;1mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+Completed in 29ms (View: 14, DB: 1) | 200 OK [http://localhost/friends]
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:25:21) [GET]
+  [4;35;1mFriend Load (1.0ms)[0m   [0mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+Completed in 27ms (View: 14, DB: 1) | 200 OK [http://localhost/friends]
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:25:26) [GET]
+  [4;36;1mFriend Load (2.0ms)[0m   [0;1mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+Completed in 28ms (View: 14, DB: 2) | 200 OK [http://localhost/friends]
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:25:29) [GET]
+  [4;35;1mFriend Load (2.0ms)[0m   [0mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+Completed in 27ms (View: 14, DB: 2) | 200 OK [http://localhost/friends]
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:25:31) [GET]
+  [4;36;1mFriend Load (2.0ms)[0m   [0;1mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+Completed in 29ms (View: 15, DB: 2) | 200 OK [http://localhost/friends]
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:25:56) [GET]
+  [4;35;1mFriend Load (2.0ms)[0m   [0mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+ERROR: compiling _run_erb_app47views47friends47index46html46erb RAISED compile error
+C:/Users/nemjain/Desktop/work/my_app/app/views/friends/index.html.erb:27: syntax error, unexpected kDO, expecting kTHEN or ':' or '\n' or ';'
+@output_buffer.concat "  ";  if friend.group =='Ramjas' do; @output_buffer.concat "\n"
+                                                          ^
+C:/Users/nemjain/Desktop/work/my_app/app/views/friends/index.html.erb:43: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47friends47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Listing friends</h1>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<table cellspacing = 25 cellpadding = 10>\n"
+@output_buffer.concat "  <tr>\n"
+@output_buffer.concat "    <th>Name</th>\n"
+@output_buffer.concat "    <th>Since</th>\n"
+@output_buffer.concat "    <th>Comment</th>\n"
+@output_buffer.concat "    <th>Group</th>\n"
+@output_buffer.concat "  </tr>\n"
+@output_buffer.concat "\n"
+ @friends.each do |friend| ; @output_buffer.concat "\n"
+@output_buffer.concat "    <tr>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((h friend.name ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((h friend.since ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((h friend.comment ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((h friend.group ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Show', friend ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Edit', edit_friend_path(friend) ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Destroy', friend, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "  </tr>\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat "</table>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "Friends in Ramjas School\n"
+@output_buffer.concat "\n"
+ @friends.each do |friend| ; @output_buffer.concat "\n"
+@output_buffer.concat "  ";  if friend.group =='Ramjas' do; @output_buffer.concat "\n"
+@output_buffer.concat "\t<tr>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((h friend.name ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((h friend.since ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((h friend.comment ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((h friend.group ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Show', friend ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Edit', edit_friend_path(friend) ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Destroy', friend, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "  </tr>\n"
+@output_buffer.concat "  ";  end ; @output_buffer.concat "\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<br />\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( link_to 'New friend', new_friend_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Users/nemjain/Desktop/work/my_app/app/views/friends/index.html.erb:43:in `compile!'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Users/nemjain/Desktop/work/my_app/app/controllers/friends_controller.rb:7:in `index'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Users/nemjain/Desktop/work/my_app/app/views/friends/index.html.erb:27: syntax error, unexpected kDO, expecting kTHEN or ':' or '\n' or ';'
+@output_buffer.concat "  ";  if friend.group =='Ramjas' do; @output_buffer.concat "\n"
+                                                          ^
+C:/Users/nemjain/Desktop/work/my_app/app/views/friends/index.html.erb:43: syntax error, unexpected kENSURE, expecting $end) on line #27 of app/views/friends/index.html.erb:
+24: Friends in Ramjas School
+25: 
+26: <% @friends.each do |friend| %>
+27:   <% if friend.group =='Ramjas' do%>
+28: 	<tr>
+29:     <td><%=h friend.name %></td>
+30:     <td><%=h friend.since %></td>
+
+    app/views/friends/index.html.erb:43:in `compile!'
+    app/controllers/friends_controller.rb:7:in `index'
+
+Rendered rescues/_trace (158.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:26:18) [GET]
+  [4;36;1mFriend Load (1.0ms)[0m   [0;1mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+Completed in 39ms (View: 25, DB: 1) | 200 OK [http://localhost/friends]
+
+
+Processing FriendsController#new (for 127.0.0.1 at 2010-06-08 09:26:24) [GET]
+Rendering template within layouts/friends
+Rendering friends/new
+Completed in 30ms (View: 17, DB: 0) | 200 OK [http://localhost/friends/new]
+
+
+Processing FriendsController#create (for 127.0.0.1 at 2010-06-08 09:26:37) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"PYiM5eQZhe1H75qn/GCO5uWW3o391qTamqiyRplyaxk=", "friend"=>{"name"=>"Mansi", "since"=>"7", "group"=>"Ramjas ", "comment"=>""}}
+  [4;35;1mFriend Create (1.0ms)[0m   [0mINSERT INTO "friends" ("name", "updated_at", "since", "comment", "group", "created_at") VALUES('Mansi', '2010-06-08 13:26:37', '7', '', 'Ramjas ', '2010-06-08 13:26:37')[0m
+Redirected to http://localhost:3000/friends/3
+Completed in 27ms (DB: 1) | 302 Found [http://localhost/friends]
+
+
+Processing FriendsController#show (for 127.0.0.1 at 2010-06-08 09:26:38) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mFriend Load (1.0ms)[0m   [0;1mSELECT * FROM "friends" WHERE ("friends"."id" = 3) [0m
+Rendering template within layouts/friends
+Rendering friends/show
+Completed in 21ms (View: 7, DB: 1) | 200 OK [http://localhost/friends/3]
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:26:43) [GET]
+  [4;35;1mFriend Load (1.0ms)[0m   [0mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+Completed in 29ms (View: 16, DB: 1) | 200 OK [http://localhost/friends/]
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:27:14) [GET]
+  [4;36;1mFriend Load (1.0ms)[0m   [0;1mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+Completed in 118ms (View: 103, DB: 1) | 200 OK [http://localhost/friends/]
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:27:38) [GET]
+  [4;35;1mFriend Load (2.0ms)[0m   [0mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+Completed in 41ms (View: 27, DB: 2) | 200 OK [http://localhost/friends/]
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:28:56) [GET]
+  [4;36;1mFriend Load (2.0ms)[0m   [0;1mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+Completed in 40ms (View: 25, DB: 2) | 200 OK [http://localhost/friends/]
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:30:19) [GET]
+  [4;35;1mFriend Load (2.0ms)[0m   [0mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+Completed in 43ms (View: 28, DB: 2) | 200 OK [http://localhost/friends/]
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:31:06) [GET]
+  [4;36;1mFriend Load (2.0ms)[0m   [0;1mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+Completed in 41ms (View: 27, DB: 2) | 200 OK [http://localhost/friends/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-08 09:37:06) [GET]
+
+SyntaxError (C:/Users/nemjain/Desktop/work/my_app/app/controllers/friends_controller.rb:14: syntax error, unexpected '\n', expecting tCOLON2 or '[' or '.'
+C:/Users/nemjain/Desktop/work/my_app/app/controllers/friends_controller.rb:87: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered rescues/_trace (60.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-08 09:38:08) [GET]
+
+SyntaxError (C:/Users/nemjain/Desktop/work/my_app/app/controllers/friends_controller.rb:86: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered rescues/_trace (61.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:38:45) [GET]
+  [4;35;1mFriend Load (2.0ms)[0m   [0mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #26 of app/views/friends/index.html.erb:
+23: 
+24: My Groups
+25: <table>
+26: <% @groups.each do |group| %>
+27:   
+28: 	<tr>
+29:     <td><%=h group %></td>
+
+    app/views/friends/index.html.erb:26
+    app/controllers/friends_controller.rb:7:in `index'
+
+Rendered rescues/_trace (94.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:40:00) [GET]
+  [4;36;1mFriend Load (2.0ms)[0m   [0;1mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+ERROR: compiling _run_erb_app47views47friends47index46html46erb RAISED compile error
+C:/Users/nemjain/Desktop/work/my_app/app/views/friends/index.html.erb:36: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47friends47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Listing friends</h1>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<table cellspacing = 25 cellpadding = 10>\n"
+@output_buffer.concat "  <tr>\n"
+@output_buffer.concat "    <th>Name</th>\n"
+@output_buffer.concat "    <th>Since</th>\n"
+@output_buffer.concat "    <th>Comment</th>\n"
+@output_buffer.concat "    <th>Group</th>\n"
+@output_buffer.concat "  </tr>\n"
+@output_buffer.concat "\n"
+ @friends.each do |friend| ; @output_buffer.concat "\n"
+@output_buffer.concat "    <tr>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((h friend.name ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((h friend.since ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((h friend.comment ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((h friend.group ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Show', friend ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Edit', edit_friend_path(friend) ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Destroy', friend, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "  </tr>\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat "</table>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "My Groups\n"
+@output_buffer.concat "<table>\n"
+ a = @groups.len ; @output_buffer.concat "\n"
+@output_buffer.concat "  \t<tr>\n"
+@output_buffer.concat "    <td>a</td>\n"
+@output_buffer.concat "    \n"
+@output_buffer.concat "     </tr>\n"
+@output_buffer.concat "  ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "</table>\n"
+@output_buffer.concat "<br />\n"
+@output_buffer.concat "<br />\n"
+@output_buffer.concat(( link_to 'New friend', new_friend_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Users/nemjain/Desktop/work/my_app/app/views/friends/index.html.erb:36:in `compile!'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Users/nemjain/Desktop/work/my_app/app/controllers/friends_controller.rb:7:in `index'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Users/nemjain/Desktop/work/my_app/app/views/friends/index.html.erb:36: syntax error, unexpected kENSURE, expecting $end) on line #36 of app/views/friends/index.html.erb:
+33: <br />
+34: <br />
+35: <%= link_to 'New friend', new_friend_path %>
+
+    app/views/friends/index.html.erb:36:in `compile!'
+    app/controllers/friends_controller.rb:7:in `index'
+
+Rendered rescues/_trace (89.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:40:16) [GET]
+  [4;35;1mFriend Load (2.0ms)[0m   [0mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+
+ActionView::TemplateError (undefined method `len' for nil:NilClass) on line #26 of app/views/friends/index.html.erb:
+23: 
+24: My Groups
+25: <table>
+26: <% a = @groups.len %>
+27:   	<tr>
+28:     <td>a</td>
+29:     
+
+    app/views/friends/index.html.erb:26
+    app/controllers/friends_controller.rb:7:in `index'
+
+Rendered rescues/_trace (89.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:41:05) [GET]
+  [4;36;1mFriend Load (1.0ms)[0m   [0;1mSELECT * FROM "friends" [0m
+
+NameError (uninitialized constant FriendsController::Araay):
+  app/controllers/friends_controller.rb:6:in `index'
+
+Rendered rescues/_trace (147.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:41:21) [GET]
+  [4;35;1mFriend Load (1.0ms)[0m   [0mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+
+ActionView::TemplateError (undefined method `len' for ["First School", "Ramjas ", "Ramjas "]:Array) on line #26 of app/views/friends/index.html.erb:
+23: 
+24: My Groups
+25: <table>
+26: <% a = @groups.len %>
+27:   	<tr>
+28:     <td>a</td>
+29:     
+
+    app/views/friends/index.html.erb:26
+    app/controllers/friends_controller.rb:11:in `index'
+
+Rendered rescues/_trace (89.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:41:48) [GET]
+  [4;36;1mFriend Load (2.0ms)[0m   [0;1mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+Completed in 152ms (View: 127, DB: 2) | 200 OK [http://localhost/friends/]
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:43:10) [GET]
+  [4;35;1mFriend Load (1.0ms)[0m   [0mSELECT * FROM "friends" [0m
+
+NoMethodError (undefined method `count' for nil:NilClass):
+  app/controllers/friends_controller.rb:9:in `index'
+  app/controllers/friends_controller.rb:8:in `each'
+  app/controllers/friends_controller.rb:8:in `index'
+
+Rendered rescues/_trace (82.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:44:17) [GET]
+  [4;36;1mFriend Load (6.0ms)[0m   [0;1mSELECT * FROM "friends" [0m
+
+NoMethodError (undefined method `count' for nil:NilClass):
+  app/controllers/friends_controller.rb:9:in `index'
+  app/controllers/friends_controller.rb:8:in `each'
+  app/controllers/friends_controller.rb:8:in `index'
+
+Rendered rescues/_trace (148.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:44:20) [GET]
+  [4;35;1mFriend Load (2.0ms)[0m   [0mSELECT * FROM "friends" [0m
+
+NoMethodError (undefined method `count' for nil:NilClass):
+  app/controllers/friends_controller.rb:9:in `index'
+  app/controllers/friends_controller.rb:8:in `each'
+  app/controllers/friends_controller.rb:8:in `index'
+
+Rendered rescues/_trace (69.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:44:40) [GET]
+  [4;36;1mFriend Load (2.0ms)[0m   [0;1mSELECT * FROM "friends" [0m
+
+NoMethodError (undefined method `count' for []:Array):
+  app/controllers/friends_controller.rb:9:in `index'
+  app/controllers/friends_controller.rb:8:in `each'
+  app/controllers/friends_controller.rb:8:in `index'
+
+Rendered rescues/_trace (161.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:44:44) [GET]
+  [4;35;1mFriend Load (2.0ms)[0m   [0mSELECT * FROM "friends" [0m
+
+NoMethodError (undefined method `count' for []:Array):
+  app/controllers/friends_controller.rb:9:in `index'
+  app/controllers/friends_controller.rb:8:in `each'
+  app/controllers/friends_controller.rb:8:in `index'
+
+Rendered rescues/_trace (66.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:46:18) [GET]
+  [4;36;1mFriend Load (2.0ms)[0m   [0;1mSELECT * FROM "friends" [0m
+
+NoMethodError (undefined method `count' for []:Array):
+  app/controllers/friends_controller.rb:9:in `index'
+  app/controllers/friends_controller.rb:8:in `each'
+  app/controllers/friends_controller.rb:8:in `index'
+
+Rendered rescues/_trace (69.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:46:22) [GET]
+  [4;35;1mFriend Load (1.0ms)[0m   [0mSELECT * FROM "friends" [0m
+
+NoMethodError (undefined method `count' for []:Array):
+  app/controllers/friends_controller.rb:9:in `index'
+  app/controllers/friends_controller.rb:8:in `each'
+  app/controllers/friends_controller.rb:8:in `index'
+
+Rendered rescues/_trace (67.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:48:33) [GET]
+  [4;36;1mFriend Load (1.0ms)[0m   [0;1mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+Completed in 30ms (View: 13, DB: 1) | 200 OK [http://localhost/friends/]
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:49:40) [GET]
+  [4;35;1mFriend Load (1.0ms)[0m   [0mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+Completed in 41ms (View: 24, DB: 1) | 200 OK [http://localhost/friends/]
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:50:00) [GET]
+  [4;36;1mFriend Load (1.0ms)[0m   [0;1mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+Completed in 40ms (View: 23, DB: 1) | 200 OK [http://localhost/friends/]
+
+
+Processing FriendsController#edit (for 127.0.0.1 at 2010-06-08 09:50:08) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mFriend Load (1.0ms)[0m   [0mSELECT * FROM "friends" WHERE ("friends"."id" = 2) [0m
+Rendering template within layouts/friends
+Rendering friends/edit
+Completed in 48ms (View: 30, DB: 1) | 200 OK [http://localhost/friends/2/edit]
+
+
+Processing FriendsController#update (for 127.0.0.1 at 2010-06-08 09:50:22) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"PYiM5eQZhe1H75qn/GCO5uWW3o391qTamqiyRplyaxk=", "id"=>"2", "friend"=>{"name"=>"Kanika", "since"=>"7", "group"=>"Ramjas ", "comment"=>"same interests"}}
+  [4;36;1mFriend Load (1.0ms)[0m   [0;1mSELECT * FROM "friends" WHERE ("friends"."id" = 2) [0m
+  [4;35;1mFriend Update (1.0ms)[0m   [0mUPDATE "friends" SET "comment" = 'same interests', "updated_at" = '2010-06-08 13:50:22' WHERE "id" = 2[0m
+Redirected to http://localhost:3000/friends/2
+Completed in 77ms (DB: 2) | 302 Found [http://localhost/friends/2]
+
+
+Processing FriendsController#show (for 127.0.0.1 at 2010-06-08 09:50:23) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mFriend Load (1.0ms)[0m   [0;1mSELECT * FROM "friends" WHERE ("friends"."id" = 2) [0m
+Rendering template within layouts/friends
+Rendering friends/show
+Completed in 24ms (View: 7, DB: 1) | 200 OK [http://localhost/friends/2]
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2010-06-08 09:50:26) [GET]
+  [4;35;1mFriend Load (1.0ms)[0m   [0mSELECT * FROM "friends" [0m
+Rendering template within layouts/friends
+Rendering friends/index
+Completed in 31ms (View: 14, DB: 1) | 200 OK [http://localhost/friends]
