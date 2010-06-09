@@ -1,0 +1,42 @@
+<!--
+Author: Charu Jain
+Homework 3: HTML/CSS
+Description: Create a html page along with the css
+Usage: run in any browser
+-->
+
+<html>
+<head>
+<!-- link to CSS stylesheet by specifying its location--> 
+<link rel="stylesheet" type ="text/css" href="main.css"/>
+</head>
+<body>
+
+<h1> Task Manager </h1>
+
+<!--div tag to create a new division-->
+<div class="form-field">
+  <label for="insert-key">Enter new task:</label>
+  <input type="text" name="insert-task" id="insert-task" size="17" />
+  <!-- Create a drop down menu-->
+  <SELECT NAME="TO-DO-LIST">
+    <Option VALUE= "Important Tasks">Important Tasks</Option>
+	<Option VALUE= "Day to Day work">Day to Day work</Option>
+	<Option VALUE= "Meetings">Meetings</Option>	
+  </SELECT>
+  <!-- Later, javascript can be used to pass the selected option to generate a list of tasks for the 
+    selected option -->
+  <button id="execute-insert" onClick="Task Added">Insert</button>
+  <br>
+</div>
+
+
+<h2>Important Tasks: </h2>
+  <!-- List of checkboxes to check which tasks are completed-->
+  Learn ruby on rails <input type="checkbox" name="task" value="learn ruby on rails"  /><br />
+  Learn python/django <input type="checkbox" name="task" value="learn python/django" /><br />
+  Skype home <input type="checkbox" name="task" value="Skype home" /><br />
+  Find a job <input type="checkbox" name="task" value="Find a job" /><br />
+    
+</body>
+</html>

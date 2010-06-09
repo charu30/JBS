@@ -1,0 +1,60 @@
+/* 
+Author: Charu Jain
+Homework3 :main.css
+Description: To add style to the html page
+Usage: link in an html page 
+      <link rel="stylesheet" type ="text/css" href="main.css"/>
+*/
+
+/*
+style for body of the page 
+*/
+body {
+    width:760px;
+    margin:100px auto 100px auto;
+	font-family: verdana, arial, sans-serif; 
+	font-size: 0.8em;
+	background-color: pink; 
+}
+
+/* Style for headings */
+h1
+{
+color:darkblue;
+text-align:center;
+}
+
+h2
+{
+color:Purple
+}
+
+/* Style for <div class = form-field> */
+.form-field {
+    padding:10px;
+    border:1px solid black;
+    background:#F0F0F0;
+}
+
+.form-field {
+    clear:both;
+}
+
+.form-field .name, .form-field label, .form-field input {
+    display:block;
+    float:left;
+}
+
+.form-field .name {
+    background:#FFFFFF;
+}
+
+.form-field .name, .form-field label {
+    font-weight:bold;
+    padding:10px;
+}
+
+.form-field input, .form-field button {
+    margin:50px;
+}
+
