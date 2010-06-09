@@ -1,3 +1,12 @@
+
+=begin
+Author: Charu Jain
+Homework 4: Personal App
+Description: Edit the controller to create groups from the friends table
+Usage: Run http://localhost:3000/friends/
+=end
+
+
 class FriendsController < ApplicationController
   # GET /friends
   # GET /friends.xml
@@ -6,6 +15,7 @@ class FriendsController < ApplicationController
 	#Create a array of groups
 	@groups = Array.new
     @friends.each do |friend|
+	#If the groups already contains the group of the friend parsed, don't push it to the array s
 	   unless @groups.include? (friend.group)  
          @groups.push(friend.group)
        end

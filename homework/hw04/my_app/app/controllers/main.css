@@ -1,0 +1,168 @@
+body {
+    width:760px;
+    margin:10px auto 10px auto;
+}
+
+.form-field {
+    padding:10px;
+    border:1px solid black;
+    background:#F0F0F0;
+}
+
+.form-field {
+    clear:both;
+}
+
+.form-field .name, .form-field label, .form-field input {
+    display:block;
+    float:left;
+}
+
+.form-field .name {
+    background:#FFFFFF;
+}
+
+.form-field .name, .form-field label {
+    font-weight:bold;
+    padding:10px;
+}
+
+.form-field input, .form-field button {
+    margin:10px;
+}
+
+/* */
+
+.filtered-results {
+    border-left:1px solid black;
+    border-bottom:1px solid black;
+    border-right:1px solid black;
+}
+
+.filtered-results .filter {
+    float:right;
+    margin:10px 10px 0px 0px;
+}
+
+.filtered-results .results {
+    clear:both;
+    margin-top:10px;
+}
+
+.results table {
+    width:740px;
+    margin:10px;
+}
+
+.results table {
+    border-top:1px solid black;
+    border-right:1px solid black;
+    border-left:1px solid black;
+}
+
+.results table tr td {
+    padding:5px;
+    border-bottom:1px solid black;
+}
+
+.results table tr td .delete-button {
+    text-align:right;
+}
+
+
+   
+/* General */
+	#cssdropdown, #cssdropdown ul { list-style: none; }
+	#cssdropdown, #cssdropdown * { padding: 0; margin: 0; }
+	
+	/* Head links */
+	#cssdropdown li.headlink { width: 220px; float: left; margin-left: -1px; border: 1px black solid; background-color: red; text-align: center; }
+	#cssdropdown li.headlink a { display: block; padding: 15px; }
+
+	/* Child lists and links */
+	#cssdropdown li.headlink ul { display: none; border-top: 1px black solid; text-align: left; }
+	#cssdropdown li.headlink:hover ul { display: block; }
+	#cssdropdown li.headlink ul li a { padding: 5px; height: 17px; }
+	#cssdropdown li.headlink ul li a:hover { background-color: #333; }
+	
+	/* Pretty styling */
+	body { font-family: verdana, arial, sans-serif; font-size: 0.8em; background-color: white; }
+	#cssdropdown a { color: white; } #cssdropdown ul li a:hover { text-decoration: none; }
+	#cssdropdown li.headlink { background-color: black; background-image: url(bg.gif); }
+	#cssdropdown li.headlink ul { background-image: url(bg.gif); background-position: bottom; padding-bottom: 10px; }
+
+   /* remove the list style */  
+   #nav {  
+       margin:0;   
+       padding:0;   
+       list-style:none;  
+   }     
+         
+      /* make the LI display inline */  
+       /* it's position relative so that position absolute */  
+       /* can be used in submenu */  
+       #nav li {  
+           float:left;   
+           display:block;   
+           width:100px;   
+           background:#ccc;   
+           position:relative;  
+           z-index:500;   
+           margin:0 1px;  
+       }  
+            
+      /* this is the parent menu */  
+       #nav li a {  
+          display:block;   
+          padding:8px 5px 0 5px;   
+          font-weight:700;    
+           height:23px;   
+           text-decoration:none;   
+          color:#fff;   
+           text-align:center;   
+           color:#333;  
+       }  
+     
+       #nav li a:hover {  
+           color:#fff;  
+       }  
+      
+     /* you can make a different style for default selected value */  
+      #nav a.selected {  
+         color:#f00;  
+       }  
+        
+          /* submenu, it's hidden by default */  
+          #nav ul {  
+               position:absolute;   
+             left:0;   
+              display:none;   
+               margin:0 0 0 -1px;   
+               padding:0;   
+             list-style:none;  
+          }  
+             
+          #nav ul li {  
+              width:100px;   
+              float:left;   
+               border-top:1px solid #fff;  
+           }  
+             
+           /* display block will make the link fill the whole area of LI */  
+          #nav ul a {  
+               display:block;    
+               height:15px;  
+               padding: 8px 5px;   
+               color:#666;  
+           }  
+            
+          #nav ul a:hover {  
+              text-decoration:underline;    
+           }  
+     
+   /* fix ie6 small issue */  
+   /* we should always avoid using hack like this */  
+   /* should put it into separate file : ) */  
+   *html #nav ul {  
+       margin:0 0 0 -2px;  
+   }  

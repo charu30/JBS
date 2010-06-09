@@ -1,0 +1,47 @@
+/*
+Author: Charu Jain
+Homework 4: Personal App
+Description: main.css to add style to front page
+Usage: Run http://localhost:3000/friends/
+*/
+
+body
+{
+background-color:azure;
+width:760px;
+margin:30px auto 30px auto;
+}
+
+/* Style for headings */
+h1
+{
+color:darkblue;
+text-align:center;
+}
+
+h2
+{
+color:Purple
+}
+
+.group table
+{
+border: 1px solid black
+}
+
+.group th
+{
+background-color:green;
+color:white;
+}
+
+table
+{
+border: 1px solid black;
+}
+
+p
+{
+font-family:"Times New Roman";
+font-size:20px;
+}

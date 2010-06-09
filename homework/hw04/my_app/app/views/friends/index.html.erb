@@ -1,6 +1,10 @@
-<h1>Listing friends</h1>
 
-<table cellspacing = 25 cellpadding = 10>
+<h1>Listing My friends</h1>
+
+<br />
+
+<div class = "form-field">
+<table name = cellspacing = 25 cellpadding = 10>
   <tr>
     <th>Name</th>
     <th>Since</th>
@@ -20,10 +24,11 @@
   </tr>
 <% end %>
 </table>
+</div>
 
 <!--Displaying my groups-->
 <h2>My Groups</h2>
-<table>
+<table class = "group">
 <% @groups.each do |group| %>
     <tr>
     <td><%=h group %></td>
