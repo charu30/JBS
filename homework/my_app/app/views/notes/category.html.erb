@@ -1,0 +1,12 @@
+<h1>Notes</h1>
+<table>
+<% @notes.each do |note| %>
+  <tr>
+    <td><%=h note.title %></td>
+    <td><%=h note.description %></td>
+    
+  </tr>
+<% end %>
+</table>
+
+ 
