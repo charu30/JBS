@@ -2561,3 +2561,299 @@ Rendering template within layouts/notes
 Rendering notes/category
   [4;36;1mNote Load (2.0ms)[0m   [0;1mSELECT * FROM "notes" WHERE ("notes".category_id = 2) [0m
 Completed in 49ms (View: 16, DB: 3) | 200 OK [http://localhost/notes/category/JBS-homework]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-06-15 09:00:17) [GET]
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 253ms (View: 123, DB: 1) | 200 OK [http://localhost/categories]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-15 09:00:43) [GET]
+
+SyntaxError (C:/Charu/JBS/homework/my_app/app/controllers/notes_controller.rb:112: embedded document meets end of file):
+  
+
+Rendered rescues/_trace (68.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-15 09:00:57) [GET]
+
+SyntaxError (C:/Charu/JBS/homework/my_app/app/controllers/notes_controller.rb:112: embedded document meets end of file):
+  
+
+Rendered rescues/_trace (143.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-15 09:01:31) [GET]
+
+SyntaxError (C:/Charu/JBS/homework/my_app/app/controllers/notes_controller.rb:112: embedded document meets end of file):
+  
+
+Rendered rescues/_trace (69.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-15 09:01:34) [GET]
+
+SyntaxError (C:/Charu/JBS/homework/my_app/app/controllers/notes_controller.rb:112: embedded document meets end of file):
+  
+
+Rendered rescues/_trace (66.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-15 09:01:37) [GET]
+
+SyntaxError (C:/Charu/JBS/homework/my_app/app/controllers/notes_controller.rb:112: embedded document meets end of file):
+  
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NotesController#index (for 127.0.0.1 at 2010-06-15 09:02:23) [GET]
+  [4;35;1mNote Load (2.0ms)[0m   [0mSELECT * FROM "notes" [0m
+Rendering template within layouts/notes
+Rendering notes/index
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+Completed in 84ms (View: 48, DB: 3) | 200 OK [http://localhost/notes]
+
+
+Processing NotesController#index (for 127.0.0.1 at 2010-06-15 09:03:14) [GET]
+  [4;35;1mNote Load (1.0ms)[0m   [0mSELECT * FROM "notes" [0m
+Rendering template within layouts/notes
+Rendering notes/index
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+Completed in 132ms (View: 118, DB: 2) | 200 OK [http://localhost/notes]
+
+
+Processing NotesController#new (for 127.0.0.1 at 2010-06-15 09:03:36) [GET]
+Rendering template within layouts/notes
+Rendering notes/new
+  [4;35;1mCategory Load (3.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Completed in 67ms (View: 50, DB: 3) | 200 OK [http://localhost/notes/new]
+
+
+Processing NotesController#create (for 127.0.0.1 at 2010-06-15 09:04:08) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"4I6CQaVHU2ZgdC6kP6To3kN/RWkmAa+tlo53acYdiTk=", "note"=>{"title"=>"purchase a bday card", "category_id"=>"1", "description"=>"for Uncle Sid"}}
+  [4;36;1mNote Create (7.0ms)[0m   [0;1mINSERT INTO "notes" ("updated_at", "title", "description", "category_id", "created_at") VALUES('2010-06-15 13:04:08', 'purchase a bday card', 'for Uncle Sid', 1, '2010-06-15 13:04:08')[0m
+Redirected to http://localhost:3000/notes/3
+Completed in 36ms (DB: 7) | 302 Found [http://localhost/notes]
+
+
+Processing NotesController#show (for 127.0.0.1 at 2010-06-15 09:04:09) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mNote Load (1.0ms)[0m   [0mSELECT * FROM "notes" WHERE ("notes"."id" = 3) [0m
+Rendering template within layouts/notes
+Rendering notes/show
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 52ms (View: 29, DB: 2) | 200 OK [http://localhost/notes/3]
+
+
+Processing NotesController#index (for 127.0.0.1 at 2010-06-15 09:04:12) [GET]
+  [4;35;1mNote Load (1.0ms)[0m   [0mSELECT * FROM "notes" [0m
+Rendering template within layouts/notes
+Rendering notes/index
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 46ms (View: 30, DB: 2) | 200 OK [http://localhost/notes]
+
+
+Processing NotesController#new (for 127.0.0.1 at 2010-06-15 09:04:19) [GET]
+Rendering template within layouts/notes
+Rendering notes/new
+  [4;36;1mCategory Load (2.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Completed in 78ms (View: 58, DB: 2) | 200 OK [http://localhost/notes/new]
+
+
+Processing NotesController#create (for 127.0.0.1 at 2010-06-15 09:04:52) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"4I6CQaVHU2ZgdC6kP6To3kN/RWkmAa+tlo53acYdiTk=", "note"=>{"title"=>"grocery on sat.", "category_id"=>"1", "description"=>"buy vegetables and rice"}}
+  [4;35;1mNote Create (1.0ms)[0m   [0mINSERT INTO "notes" ("updated_at", "title", "description", "category_id", "created_at") VALUES('2010-06-15 13:04:52', 'grocery on sat.', 'buy vegetables and rice', 1, '2010-06-15 13:04:52')[0m
+Redirected to http://localhost:3000/notes/4
+Completed in 127ms (DB: 1) | 302 Found [http://localhost/notes]
+
+
+Processing NotesController#show (for 127.0.0.1 at 2010-06-15 09:04:53) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mNote Load (1.0ms)[0m   [0;1mSELECT * FROM "notes" WHERE ("notes"."id" = 4) [0m
+Rendering template within layouts/notes
+Rendering notes/show
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 38ms (View: 21, DB: 2) | 200 OK [http://localhost/notes/4]
+
+
+Processing NotesController#index (for 127.0.0.1 at 2010-06-15 09:04:58) [GET]
+  [4;36;1mNote Load (2.0ms)[0m   [0;1mSELECT * FROM "notes" [0m
+Rendering template within layouts/notes
+Rendering notes/index
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 49ms (View: 33, DB: 3) | 200 OK [http://localhost/notes]
+
+
+Processing NotesController#category (for 127.0.0.1 at 2010-06-15 09:05:05) [GET]
+  Parameters: {"id"=>"JBS-homework"}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."name" = 'JBS-homework') LIMIT 1[0m
+Rendering template within layouts/notes
+Rendering notes/category
+  [4;35;1mNote Load (0.0ms)[0m   [0mSELECT * FROM "notes" WHERE ("notes".category_id = 2) [0m
+Completed in 50ms (View: 21, DB: 1) | 200 OK [http://localhost/notes/category/JBS-homework]
+
+
+Processing NotesController#category (for 127.0.0.1 at 2010-06-15 09:05:15) [GET]
+  Parameters: {"id"=>"Misc"}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."name" = 'Misc') LIMIT 1[0m
+
+NoMethodError (undefined method `notes' for nil:NilClass):
+  app/controllers/notes_controller.rb:28:in `category'
+
+Rendered rescues/_trace (169.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-15 09:05:21) [GET]
+
+ActionController::RoutingError (No route matches "/notes/category/Misc." with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-15 09:06:07) [GET]
+
+ActionController::RoutingError (No route matches "/notes/category/Misc." with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NotesController#index (for 127.0.0.1 at 2010-06-15 09:06:28) [GET]
+  [4;35;1mNote Load (2.0ms)[0m   [0mSELECT * FROM "notes" [0m
+Rendering template within layouts/notes
+Rendering notes/index
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 52ms (View: 36, DB: 3) | 200 OK [http://localhost/notes]
+
+
+Processing NotesController#new (for 127.0.0.1 at 2010-06-15 09:06:37) [GET]
+Rendering template within layouts/notes
+Rendering notes/new
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Completed in 62ms (View: 46, DB: 1) | 200 OK [http://localhost/notes/new]
+
+
+Processing NotesController#create (for 127.0.0.1 at 2010-06-15 09:07:02) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"4I6CQaVHU2ZgdC6kP6To3kN/RWkmAa+tlo53acYdiTk=", "note"=>{"title"=>"study javascript", "category_id"=>"2", "description"=>"to add point from the map itself"}}
+  [4;36;1mNote Create (1.0ms)[0m   [0;1mINSERT INTO "notes" ("updated_at", "title", "description", "category_id", "created_at") VALUES('2010-06-15 13:07:02', 'study javascript', 'to add point from the map itself', 2, '2010-06-15 13:07:02')[0m
+Redirected to http://localhost:3000/notes/5
+Completed in 36ms (DB: 1) | 302 Found [http://localhost/notes]
+
+
+Processing NotesController#show (for 127.0.0.1 at 2010-06-15 09:07:04) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mNote Load (1.0ms)[0m   [0mSELECT * FROM "notes" WHERE ("notes"."id" = 5) [0m
+Rendering template within layouts/notes
+Rendering notes/show
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+Completed in 39ms (View: 22, DB: 2) | 200 OK [http://localhost/notes/5]
+
+
+Processing NotesController#index (for 127.0.0.1 at 2010-06-15 09:07:07) [GET]
+  [4;35;1mNote Load (2.0ms)[0m   [0mSELECT * FROM "notes" [0m
+Rendering template within layouts/notes
+Rendering notes/index
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+Completed in 62ms (View: 44, DB: 4) | 200 OK [http://localhost/notes]
+
+
+Processing NotesController#destroy (for 127.0.0.1 at 2010-06-15 09:08:13) [DELETE]
+  Parameters: {"authenticity_token"=>"4I6CQaVHU2ZgdC6kP6To3kN/RWkmAa+tlo53acYdiTk=", "id"=>"3"}
+  [4;36;1mNote Load (1.0ms)[0m   [0;1mSELECT * FROM "notes" WHERE ("notes"."id" = 3) [0m
+  [4;35;1mNote Destroy (1.0ms)[0m   [0mDELETE FROM "notes" WHERE "id" = 3[0m
+Redirected to http://localhost:3000/notes
+Completed in 27ms (DB: 2) | 302 Found [http://localhost/notes/3]
+
+
+Processing NotesController#index (for 127.0.0.1 at 2010-06-15 09:08:14) [GET]
+  [4;36;1mNote Load (1.0ms)[0m   [0;1mSELECT * FROM "notes" [0m
+Rendering template within layouts/notes
+Rendering notes/index
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+Completed in 51ms (View: 33, DB: 3) | 200 OK [http://localhost/notes]
+
+
+Processing NotesController#new (for 127.0.0.1 at 2010-06-15 09:08:24) [GET]
+Rendering template within layouts/notes
+Rendering notes/new
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Completed in 73ms (View: 55, DB: 1) | 200 OK [http://localhost/notes/new]
+
+
+Processing NotesController#create (for 127.0.0.1 at 2010-06-15 09:08:45) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"4I6CQaVHU2ZgdC6kP6To3kN/RWkmAa+tlo53acYdiTk=", "note"=>{"title"=>"buy a bday card", "category_id"=>"1", "description"=>"Uncle Sid"}}
+  [4;35;1mNote Create (3.0ms)[0m   [0mINSERT INTO "notes" ("updated_at", "title", "description", "category_id", "created_at") VALUES('2010-06-15 13:08:45', 'buy a bday card', 'Uncle Sid', 1, '2010-06-15 13:08:45')[0m
+Redirected to http://localhost:3000/notes/6
+Completed in 91ms (DB: 3) | 302 Found [http://localhost/notes]
+
+
+Processing NotesController#show (for 127.0.0.1 at 2010-06-15 09:08:46) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mNote Load (1.0ms)[0m   [0;1mSELECT * FROM "notes" WHERE ("notes"."id" = 6) [0m
+Rendering template within layouts/notes
+Rendering notes/show
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 37ms (View: 20, DB: 2) | 200 OK [http://localhost/notes/6]
+
+
+Processing NotesController#index (for 127.0.0.1 at 2010-06-15 09:08:49) [GET]
+  [4;36;1mNote Load (2.0ms)[0m   [0;1mSELECT * FROM "notes" [0m
+Rendering template within layouts/notes
+Rendering notes/index
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 73ms (View: 55, DB: 4) | 200 OK [http://localhost/notes]
+
+
+Processing NotesController#category (for 127.0.0.1 at 2010-06-15 09:08:55) [GET]
+  Parameters: {"id"=>"JBS-homework"}
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."name" = 'JBS-homework') LIMIT 1[0m
+Rendering template within layouts/notes
+Rendering notes/category
+  [4;36;1mNote Load (1.0ms)[0m   [0;1mSELECT * FROM "notes" WHERE ("notes".category_id = 2) [0m
+Completed in 39ms (View: 11, DB: 2) | 200 OK [http://localhost/notes/category/JBS-homework]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-15 09:09:20) [GET]
+
+ActionController::RoutingError (No route matches "/notes/category/Misc." with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-15 09:11:27) [GET]
+
+ActionController::RoutingError (No route matches "/notes/category/misc." with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

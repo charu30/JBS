@@ -3,11 +3,7 @@ Author: Charu Jain
 Homework 6: Personal App
 Description: added a view 'category' to show the notes of a particular category
 Usage: Run http://localhost:3000/notes/category/JBS-homework
-               
-
-
-
-
+=end           
 
 
 class NotesController < ApplicationController
