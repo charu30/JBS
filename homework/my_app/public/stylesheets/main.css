@@ -1,8 +1,8 @@
 /*
 Author: Charu Jain
-Homework 4: Personal App
+Homework 6: Personal App
 Description: main.css to add style to front page
-Usage: Run http://localhost:3000/friends/
+Usage: Run http://localhost:3000/notes
 */
 
 body
@@ -44,4 +44,9 @@ p
 {
 font-family:"Times New Roman";
 font-size:20px;
+}
+
+ul
+{
+list-style-position: outside
 }

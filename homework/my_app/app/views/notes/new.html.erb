@@ -1,3 +1,4 @@
+
 <h1>New note</h1>
 
 <% form_for(@note) do |f| %>
@@ -12,14 +13,15 @@
     <%= f.text_area :description %>
   </p>
    
+  
+<!--Show all the available categories as options-->   
 <p> Choose a category
 <% for i in Category.all do %>
    <p>
      <%= f.radio_button(:category_id, i.id) %> <%= f.label i.name %>
    </p>
 <% end %>
-  
-    
+      
   
   <p>
     <%= f.submit 'Create' %>

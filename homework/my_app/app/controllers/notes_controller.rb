@@ -1,6 +1,19 @@
+=begin
+Author: Charu Jain
+Homework 6: Personal App
+Description: added a view 'category' to show the notes of a particular category
+Usage: Run http://localhost:3000/notes/category/JBS-homework
+               
+
+
+
+
+
+
 class NotesController < ApplicationController
   # GET /notes
   # GET /notes.xml
+ 
   def index
     @notes = Note.all
 
@@ -10,10 +23,12 @@ class NotesController < ApplicationController
     end
   end
 
+  #Created a view to show the notes of a particular category
+  
   def category
-    @category = Category.find_by_name(params[:id])
-    #@notes= Note.find_all_by_category(params[:id])
-    #puts @notes	
+    #Find the category object from its name
+	@category = Category.find_by_name(params[:id])
+    #Find all the notes of the above category object.	
     @notes = @category.notes
     respond_to do |format|
       format.html
@@ -21,7 +36,7 @@ class NotesController < ApplicationController
     end
   end  
   
-  
+   
   # GET /notes/1
   # GET /notes/1.xml
   def show
@@ -92,4 +107,6 @@ class NotesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+ 
 end

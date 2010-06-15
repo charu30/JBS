@@ -2164,3 +2164,400 @@ Rendering template within layouts/notes
 Rendering notes/category
   [4;35;1mNote Load (0.0ms)[0m   [0mSELECT * FROM "notes" WHERE ("notes".category_id = 2) [0m
 Completed in 38ms (View: 11, DB: 1) | 200 OK [http://localhost/notes/category/JBS-homework]
+
+
+Processing NotesController#index (for 127.0.0.1 at 2010-06-15 06:57:01) [GET]
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 238ms (View: 235, DB: 0) | 401 Unauthorized [http://localhost/notes]
+
+
+Processing NotesController#index (for 127.0.0.1 at 2010-06-15 06:57:16) [GET]
+  [4;36;1mNote Load (15.0ms)[0m   [0;1mSELECT * FROM "notes" [0m
+Rendering template within layouts/notes
+Rendering notes/index
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+ERROR: compiling _run_erb_app47views47layouts47notes46html46erb RAISED compile error
+C:/Users/nemjain/Desktop/work/my_app/app/views/layouts/notes.html.erb:8: syntax error, unexpected tSTRING_BEG
+@output_buffer.concat "  "; @output_buffer.concat(( stylesheet_link_tag 'scaffold'. 'main' ).to_s); @output_buffer.concat "\n"
+                                                                                     ^
+Function body:           def _run_erb_app47views47layouts47notes46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n"
+@output_buffer.concat "       \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n"
+@output_buffer.concat "<head>\n"
+@output_buffer.concat "  <meta http-equiv=\"content-type\" content=\"text/html;charset=UTF-8\" />\n"
+@output_buffer.concat "  <title>Notes: "; @output_buffer.concat(( controller.action_name ).to_s); @output_buffer.concat "</title>\n"
+@output_buffer.concat "  "; @output_buffer.concat(( stylesheet_link_tag 'scaffold'. 'main' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</head>\n"
+@output_buffer.concat "<body>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p style=\"color: green\">"; @output_buffer.concat(( notice ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( yield ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "</body>\n"
+@output_buffer.concat "</html>\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Users/nemjain/Desktop/work/my_app/app/views/layouts/notes.html.erb:21:in `compile!'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:352:in `_render_with_layout'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Users/nemjain/Desktop/work/my_app/app/controllers/notes_controller.rb:11:in `index'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Users/nemjain/Desktop/work/my_app/app/views/layouts/notes.html.erb:8: syntax error, unexpected tSTRING_BEG
+@output_buffer.concat "  "; @output_buffer.concat(( stylesheet_link_tag 'scaffold'. 'main' ).to_s); @output_buffer.concat "\n"
+                                                                                     ^) on line #8 of app/views/layouts/notes.html.erb:
+5: <head>
+6:   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+7:   <title>Notes: <%= controller.action_name %></title>
+8:   <%= stylesheet_link_tag 'scaffold'. 'main' %>
+9: </head>
+10: <body>
+11: 
+
+    app/views/layouts/notes.html.erb:21:in `compile!'
+    app/controllers/notes_controller.rb:11:in `index'
+
+Rendered rescues/_trace (98.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NotesController#index (for 127.0.0.1 at 2010-06-15 06:57:38) [GET]
+  [4;36;1mNote Load (1.0ms)[0m   [0;1mSELECT * FROM "notes" [0m
+Rendering template within layouts/notes
+Rendering notes/index
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+Completed in 128ms (View: 112, DB: 2) | 200 OK [http://localhost/notes]
+
+
+Processing NotesController#category (for 127.0.0.1 at 2010-06-15 06:58:00) [GET]
+  Parameters: {"id"=>"JBS-homework"}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."name" = 'JBS-homework') LIMIT 1[0m
+Rendering template within layouts/notes
+Rendering notes/category
+  [4;35;1mNote Load (1.0ms)[0m   [0mSELECT * FROM "notes" WHERE ("notes".category_id = 2) [0m
+Completed in 46ms (View: 17, DB: 2) | 200 OK [http://localhost/notes/category/JBS-homework]
+
+
+Processing NotesController#show (for 127.0.0.1 at 2010-06-15 06:59:32) [GET]
+  Parameters: {"id"=>"category"}
+  [4;36;1mNote Load (0.0ms)[0m   [0;1mSELECT * FROM "notes" WHERE ("notes"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Note with ID=category):
+  app/controllers/notes_controller.rb:33:in `show'
+
+Rendered rescues/_trace (79.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing NotesController#category (for 127.0.0.1 at 2010-06-15 06:59:39) [GET]
+  Parameters: {"id"=>"JBS-homework"}
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."name" = 'JBS-homework') LIMIT 1[0m
+Rendering template within layouts/notes
+Rendering notes/category
+  [4;36;1mNote Load (1.0ms)[0m   [0;1mSELECT * FROM "notes" WHERE ("notes".category_id = 2) [0m
+Completed in 35ms (View: 9, DB: 1) | 200 OK [http://localhost/notes/category/JBS-homework]
+
+
+Processing NotesController#category (for 127.0.0.1 at 2010-06-15 07:01:05) [GET]
+  Parameters: {"id"=>"JBS-homework"}
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."name" = 'JBS-homework') LIMIT 1[0m
+Rendering template within layouts/notes
+Rendering notes/category
+  [4;36;1mNote Load (1.0ms)[0m   [0;1mSELECT * FROM "notes" WHERE ("notes".category_id = 2) [0m
+
+ActionView::TemplateError (undefined method `category' for nil:NilClass) on line #7 of app/views/notes/category.html.erb:
+4:   <p>
+5:   <b>Category:</b>
+6:   <ul>
+7:     <li> <%=h @note.category.name %> </li>
+8: </ul>
+9: </p>
+10:   
+
+    app/views/notes/category.html.erb:7
+    app/views/notes/category.html.erb:3
+    app/controllers/notes_controller.rb:22:in `category'
+
+Rendered rescues/_trace (104.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NotesController#category (for 127.0.0.1 at 2010-06-15 07:02:28) [GET]
+  Parameters: {"id"=>"JBS-homework"}
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."name" = 'JBS-homework') LIMIT 1[0m
+Rendering template within layouts/notes
+Rendering notes/category
+  [4;36;1mNote Load (0.0ms)[0m   [0;1mSELECT * FROM "notes" WHERE ("notes".category_id = 2) [0m
+
+ActionView::TemplateError (undefined method `title' for nil:NilClass) on line #7 of app/views/notes/category.html.erb:
+4:   <p>
+5:   <b>Category:</b>
+6:   <ul>
+7:     <li> <%=h @note.title %>    <%=h note.description %> </li>
+8: </ul>
+9: </p>
+10: <% end %>
+
+    app/views/notes/category.html.erb:7
+    app/views/notes/category.html.erb:3
+    app/controllers/notes_controller.rb:22:in `category'
+
+Rendered rescues/_trace (175.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NotesController#category (for 127.0.0.1 at 2010-06-15 07:02:30) [GET]
+  Parameters: {"id"=>"JBS-homework"}
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."name" = 'JBS-homework') LIMIT 1[0m
+Rendering template within layouts/notes
+Rendering notes/category
+  [4;36;1mNote Load (1.0ms)[0m   [0;1mSELECT * FROM "notes" WHERE ("notes".category_id = 2) [0m
+
+ActionView::TemplateError (undefined method `title' for nil:NilClass) on line #7 of app/views/notes/category.html.erb:
+4:   <p>
+5:   <b>Category:</b>
+6:   <ul>
+7:     <li> <%=h @note.title %>    <%=h note.description %> </li>
+8: </ul>
+9: </p>
+10: <% end %>
+
+    app/views/notes/category.html.erb:7
+    app/views/notes/category.html.erb:3
+    app/controllers/notes_controller.rb:22:in `category'
+
+Rendered rescues/_trace (115.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NotesController#category (for 127.0.0.1 at 2010-06-15 07:03:04) [GET]
+  Parameters: {"id"=>"JBS-homework"}
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."name" = 'JBS-homework') LIMIT 1[0m
+Rendering template within layouts/notes
+Rendering notes/category
+  [4;36;1mNote Load (0.0ms)[0m   [0;1mSELECT * FROM "notes" WHERE ("notes".category_id = 2) [0m
+
+ActionView::TemplateError (undefined method `title' for nil:NilClass) on line #8 of app/views/notes/category.html.erb:
+5:   <b>Category:</b>
+6:   <ul>
+7:     <li>
+8: 	<%=h @note.title %> 
+9:   	<%=h @note.description %>
+10: 	</li>
+11: </ul>
+
+    app/views/notes/category.html.erb:8
+    app/views/notes/category.html.erb:3
+    app/controllers/notes_controller.rb:22:in `category'
+
+Rendered rescues/_trace (101.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NotesController#category (for 127.0.0.1 at 2010-06-15 07:03:08) [GET]
+  Parameters: {"id"=>"JBS-homework"}
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."name" = 'JBS-homework') LIMIT 1[0m
+Rendering template within layouts/notes
+Rendering notes/category
+  [4;36;1mNote Load (0.0ms)[0m   [0;1mSELECT * FROM "notes" WHERE ("notes".category_id = 2) [0m
+
+ActionView::TemplateError (undefined method `title' for nil:NilClass) on line #8 of app/views/notes/category.html.erb:
+5:   <b>Category:</b>
+6:   <ul>
+7:     <li>
+8: 	<%=h @note.title %> 
+9:   	<%=h @note.description %>
+10: 	</li>
+11: </ul>
+
+    app/views/notes/category.html.erb:8
+    app/views/notes/category.html.erb:3
+    app/controllers/notes_controller.rb:22:in `category'
+
+Rendered rescues/_trace (102.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NotesController#category (for 127.0.0.1 at 2010-06-15 07:03:27) [GET]
+  Parameters: {"id"=>"JBS-homework"}
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."name" = 'JBS-homework') LIMIT 1[0m
+Rendering template within layouts/notes
+Rendering notes/category
+  [4;36;1mNote Load (1.0ms)[0m   [0;1mSELECT * FROM "notes" WHERE ("notes".category_id = 2) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+ActionView::TemplateError (undefined method `title' for #<Class:0x5b5da4c>) on line #8 of app/views/notes/category.html.erb:
+5:   <b>Category:</b>
+6:   <ul>
+7:     <li>
+8: 	<%=h @notes.title %> 
+9:   	<%=h @notes.description %>
+10: 	</li>
+11: </ul>
+
+    app/views/notes/category.html.erb:8
+    app/views/notes/category.html.erb:3
+    app/controllers/notes_controller.rb:22:in `category'
+
+Rendered rescues/_trace (114.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NotesController#category (for 127.0.0.1 at 2010-06-15 07:03:31) [GET]
+  Parameters: {"id"=>"JBS-homework"}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."name" = 'JBS-homework') LIMIT 1[0m
+Rendering template within layouts/notes
+Rendering notes/category
+  [4;35;1mNote Load (1.0ms)[0m   [0mSELECT * FROM "notes" WHERE ("notes".category_id = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+ActionView::TemplateError (undefined method `title' for #<Class:0x5dcf320>) on line #8 of app/views/notes/category.html.erb:
+5:   <b>Category:</b>
+6:   <ul>
+7:     <li>
+8: 	<%=h @notes.title %> 
+9:   	<%=h @notes.description %>
+10: 	</li>
+11: </ul>
+
+    app/views/notes/category.html.erb:8
+    app/views/notes/category.html.erb:3
+    app/controllers/notes_controller.rb:22:in `category'
+
+Rendered rescues/_trace (114.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NotesController#category (for 127.0.0.1 at 2010-06-15 07:04:54) [GET]
+  Parameters: {"id"=>"JBS-homework"}
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."name" = 'JBS-homework') LIMIT 1[0m
+Rendering template within layouts/notes
+Rendering notes/category
+  [4;36;1mNote Load (0.0ms)[0m   [0;1mSELECT * FROM "notes" WHERE ("notes".category_id = 2) [0m
+Completed in 50ms (View: 21, DB: 1) | 200 OK [http://localhost/notes/category/JBS-homework]
+
+
+Processing NotesController#category (for 127.0.0.1 at 2010-06-15 07:05:30) [GET]
+  Parameters: {"id"=>"JBS-homework"}
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."name" = 'JBS-homework') LIMIT 1[0m
+Rendering template within layouts/notes
+Rendering notes/category
+  [4;36;1mNote Load (1.0ms)[0m   [0;1mSELECT * FROM "notes" WHERE ("notes".category_id = 2) [0m
+Completed in 49ms (View: 18, DB: 2) | 200 OK [http://localhost/notes/category/JBS-homework]
+
+
+Processing NotesController#category (for 127.0.0.1 at 2010-06-15 07:05:33) [GET]
+  Parameters: {"id"=>"JBS-homework"}
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."name" = 'JBS-homework') LIMIT 1[0m
+Rendering template within layouts/notes
+Rendering notes/category
+  [4;36;1mNote Load (1.0ms)[0m   [0;1mSELECT * FROM "notes" WHERE ("notes".category_id = 2) [0m
+Completed in 41ms (View: 11, DB: 2) | 200 OK [http://localhost/notes/category/JBS-homework]
+
+
+Processing NotesController#category (for 127.0.0.1 at 2010-06-15 07:12:02) [GET]
+  Parameters: {"id"=>"JBS-homework"}
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."name" = 'JBS-homework') LIMIT 1[0m
+Rendering template within layouts/notes
+Rendering notes/category
+  [4;36;1mNote Load (2.0ms)[0m   [0;1mSELECT * FROM "notes" WHERE ("notes".category_id = 2) [0m
+Completed in 49ms (View: 16, DB: 3) | 200 OK [http://localhost/notes/category/JBS-homework]
