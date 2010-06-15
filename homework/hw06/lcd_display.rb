@@ -74,7 +74,7 @@ end
 
 #Parse the input from the user
 input = ARGV
-puts input.join(' ')
+
 #If size is provided
 if input.include? "-s"
 	scale, size, numbers = input.join(' ').to_s.split(" ") 
