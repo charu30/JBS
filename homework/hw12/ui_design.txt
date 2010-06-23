@@ -1,0 +1,35 @@
+
+Windows
+
+3 features that makes Windows easy to use:
+
+* One can easily learn how to use Windows. It's less complex.
+  If a non-technical person wants to send email, he/she can just click on firefox/IE symbol 
+  at the bottom and can use the internet.
+  
+* For a naive user, it will be easy to write a document on Word or Notepad as it is user-friendly and simple to use. 
+  (However, for experienced users, they'll be needing more functionality and shortcut. 
+ 
+* On clicking, 'start' button shows all the important folders, recent applications, Recent Items which makes easy to find documents.
+
+
+3 features that makes Windows diificult to use:
+
+* To activate automatic completion for the current command session
+
+  While working in command prompt, I always face a problem in auto-completion, so have to manually write full path. 
+  I find how to activate auto-completion. It's a tedious task. Type cmd /f, then type CTRL+D to complete a folder name or 
+  CTRL+F to complete a file name. 
+  I wish like Linux, we can just use a tab to auto-complete file name in Windows. 
+  
+  
+* Mostly every application has to be downloaded and installed manually on Windows. I used Ubuntu for some time, and it's so convenient
+  to install packages using 'apt-get' command. That feature in windows would have made life so easy.
+
+* For frequent and experienced users, there is no free text editor for Windows like textmate for Mac, with a large number of shortcuts 
+  functionalities.
+  
+  
+I have been using Windows since I remeber using computers!. So, I am pretty comfortable with it. However, I want to try and learn Mac
+whenever I'll be done learning other things.
+  

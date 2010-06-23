@@ -1,0 +1,13 @@
+Loaded suite dictionary05
+Started
+....E
+Finished in 0.001 seconds.
+
+  1) Error:
+test_remove_xlate(DictionaryTest):
+NoMethodError: undefined method `remove_translation' for #<Dictionary:0x4503904 @dictionary={"boek"=>"book"}>
+    dictionary05.rb:67:in `test_remove_xlate'
+    C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/mocha-0.9.8/lib/mocha/integration/test_unit/ruby_version_186_and_above.rb:19:in `__send__'
+    C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/mocha-0.9.8/lib/mocha/integration/test_unit/ruby_version_186_and_above.rb:19:in `run'
+
+5 tests, 6 assertions, 0 failures, 1 errors

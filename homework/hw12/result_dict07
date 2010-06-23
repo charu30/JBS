@@ -1,0 +1,13 @@
+Loaded suite dictionary07
+Started
+...E..
+Finished in 0.001 seconds.
+
+  1) Error:
+test_count_words_dictionary(DictionaryTest):
+NoMethodError: undefined method `count_words' for #<Dictionary:0x42b58c8 @dictionary={"coe"=>"cow"}>
+    dictionary07.rb:79:in `test_count_words_dictionary'
+    C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/mocha-0.9.8/lib/mocha/integration/test_unit/ruby_version_186_and_above.rb:19:in `__send__'
+    C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/mocha-0.9.8/lib/mocha/integration/test_unit/ruby_version_186_and_above.rb:19:in `run'
+
+6 tests, 8 assertions, 0 failures, 1 errors
