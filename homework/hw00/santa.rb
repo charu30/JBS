@@ -23,23 +23,32 @@ ARGF.each do |b|
     @count+=1
 end
 
+#Array of secret santa's
 @secret_santa = Array.new
-@is_santa     = Array.new(@count)
+#Array to mark if a person is a santa or not
+@is_santa = Array.new(@count)
 
 def find_santa(name,index) 
   santa =[]
+  #check if a perso has a santa
   has_santa = 'no'
   has_checked = Array.new
   while has_santa == 'no'
+    #pick a random number
     ind = rand(@count)
+	#to indicate that a person has been checked to be a santa
     has_checked[ind] = 1
     i = @first[ind]
+	# if a person is not a santa 
     if @is_santa[ind]!= 1  
+	   #if family name of person and the candidate santa is not same
         unless @last[@first.index(i)]==@last[index]
            santa = i + " " + @last[@first.index(i)] 
+		   #assign a asanta
            @secret_santa.push(santa)
+		   #change has_santa to 'yes'
            has_santa = 'yes'
-           @is_santa[ind] = 1
+		   @is_santa[ind] = 1
         end
      end
    end
