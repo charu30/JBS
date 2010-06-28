@@ -1,0 +1,85 @@
+(in C:/Charu/JBS/homework/my_app)
+Loaded suite C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader
+Started
+BrowsingTest#test_homepage (491 ms warmup)
+           wall_time: 19 ms
+              memory: 0.00 KB
+             objects: 0
+             gc_runs: 0
+             gc_time: 0 ms
+.CategoryTest#test_index (19 ms warmup)
+           wall_time: 17 ms
+              memory: 0.00 KB
+             objects: 0
+             gc_runs: 0
+             gc_time: 0 ms
+.CategoryTest#test_show (53 ms warmup)
+           wall_time: 12 ms
+              memory: 0.00 KB
+             objects: 0
+             gc_runs: 0
+             gc_time: 0 ms
+.HomepageTest#test_homepage (19 ms warmup)
+           wall_time: 21 ms
+              memory: 0.00 KB
+             objects: 0
+             gc_runs: 0
+             gc_time: 0 ms
+.JBS-homework
+JBS-homework
+NoteTest#test_category (94 ms warmup)
+JBS-homework
+JBS-homework
+JBS-homework
+JBS-homework
+JBS-homework
+JBS-homework
+JBS-homework
+JBS-homework
+           wall_time: 129 ms
+JBS-homework
+JBS-homework
+JBS-homework
+JBS-homework
+JBS-homework
+JBS-homework
+JBS-homework
+JBS-homework
+              memory: 0.00 KB
+JBS-homework
+JBS-homework
+JBS-homework
+JBS-homework
+JBS-homework
+JBS-homework
+JBS-homework
+JBS-homework
+             objects: 0
+JBS-homework
+JBS-homework
+JBS-homework
+JBS-homework
+JBS-homework
+JBS-homework
+JBS-homework
+JBS-homework
+             gc_runs: 0
+JBS-homework
+JBS-homework
+JBS-homework
+JBS-homework
+JBS-homework
+JBS-homework
+JBS-homework
+JBS-homework
+             gc_time: 0 ms
+.NoteTest#test_index (200 ms warmup)
+           wall_time: 203 ms
+              memory: 0.00 KB
+             objects: 0
+             gc_runs: 0
+             gc_time: 0 ms
+.
+Finished in 16.778 seconds.
+
+30 tests, 0 assertions, 0 failures, 0 errors

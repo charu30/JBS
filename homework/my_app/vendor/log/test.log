@@ -1,0 +1,78 @@
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-15 22:34:13) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  /test/performance/browsing_test.rb:7:in `test_homepage'
+  C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/1.8/test/unit/testsuite.rb:34:in `run'
+  C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/1.8/test/unit/testsuite.rb:33:in `each'
+  C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/1.8/test/unit/testsuite.rb:33:in `run'
+  C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/1.8/test/unit/testsuite.rb:34:in `run'
+  C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/1.8/test/unit/testsuite.rb:33:in `each'
+  C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/1.8/test/unit/testsuite.rb:33:in `run'
+  C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/1.8/test/unit/ui/testrunnermediator.rb:46:in `run_suite'
+  C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/1.8/test/unit/ui/console/testrunner.rb:67:in `start_mediator'
+  C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/1.8/test/unit/ui/console/testrunner.rb:41:in `start'
+  C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/1.8/test/unit/ui/testrunnerutilities.rb:29:in `run'
+  C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/1.8/test/unit/autorunner.rb:216:in `run'
+  C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/1.8/test/unit/autorunner.rb:12:in `run'
+  C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/1.8/test/unit.rb:278
+  rake (0.8.7) lib/rake/rake_test_loader.rb:5
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-15 22:34:13) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  /test/performance/browsing_test.rb:7:in `test_homepage'
+  C:1:in `__send__'
+  C:1:in `run_test'
+  C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/1.8/test/unit/testsuite.rb:34:in `run'
+  C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/1.8/test/unit/testsuite.rb:33:in `each'
+  C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/1.8/test/unit/testsuite.rb:33:in `run'
+  C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/1.8/test/unit/testsuite.rb:34:in `run'
+  C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/1.8/test/unit/testsuite.rb:33:in `each'
+  C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/1.8/test/unit/testsuite.rb:33:in `run'
+  C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/1.8/test/unit/ui/testrunnermediator.rb:46:in `run_suite'
+  C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/1.8/test/unit/ui/console/testrunner.rb:67:in `start_mediator'
+  C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/1.8/test/unit/ui/console/testrunner.rb:41:in `start'
+  C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/1.8/test/unit/ui/testrunnerutilities.rb:29:in `run'
+  C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/1.8/test/unit/autorunner.rb:216:in `run'
+  C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/1.8/test/unit/autorunner.rb:12:in `run'
+  C:/Users/nemjain/Desktop/Rails/ruby/lib/ruby/1.8/test/unit.rb:278
+  rake (0.8.7) lib/rake/rake_test_loader.rb:5
+
+Rendering rescues/layout (not_found)

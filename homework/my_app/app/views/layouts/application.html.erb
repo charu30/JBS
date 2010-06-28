@@ -1,0 +1,44 @@
+<!--begin
+Author: Charu Jain
+Homework 8: Auth logic
+Description: Add a login feature using auth-logic
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Categories <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'scaffold', 'main' %>
+</head>
+<body>
+
+
+<div id="user_nav">
+    <!--A current logged in user can edit hos profile or logout-->
+    <% if current_user %>
+    	<%= link_to "Edit Profile", edit_user_path(:current)%>
+		<%= link_to "Logout", logout_path%>
+	<!--A general user can register a account and login --> 
+	<% else %>	
+		<%= link_to "Register", new_user_path %>
+		<%= link_to "Login", login_path%>
+	<% end%>
+  
+</div>
+
+<p style="color: green"><%= flash[:notice] %></p>
+<%= yield %>
+
+</body>
+</html>
+
+<!-- 
+<head>
+<%= javascript_include_tag 'jquery' %>
+<%= javascript_include_tag :defaults %>
+<%= javascript_include_tag 'jrails' %>
+
+</head>
+
+-->
+

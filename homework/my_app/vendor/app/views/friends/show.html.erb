@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%=h @friend.name %>
+</p>
+
+<p>
+  <b>Since:</b>
+  <%=h @friend.since %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%=h @friend.comment %>
+</p>
+
+<p>
+  <b>Group:</b>
+  <%=h @friend.group %>
+</p>
+
+
+<%= link_to 'Edit', edit_friend_path(@friend) %> |
+<%= link_to 'Back', friends_path %>

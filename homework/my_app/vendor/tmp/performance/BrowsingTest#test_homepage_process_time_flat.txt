@@ -1,0 +1,34 @@
+Thread ID: 32596900
+Total: 0.044000
+
+ %self     total     self     wait    child    calls  name
+ 11.36      0.01     0.01     0.00     0.00      342  String#sub
+  9.09      0.03     0.00     0.00     0.02       30  Array#each
+  9.09      0.01     0.00     0.00     0.01      471  Proc#call(d1)
+  6.82      0.01     0.00     0.00     0.00      107  Array#each(d1)
+  4.55      0.00     0.00     0.00     0.00       56  String#inspect
+  4.55      0.00     0.00     0.00     0.00      513  String#include?
+  4.55      0.00     0.00     0.00     0.00        3  IO#write
+  4.55      0.04     0.00     0.00     0.04        1  ActiveSupport::Testing::Performance::Profiler#run
+  2.27      0.00     0.00     0.00     0.00      322  Hash#initialize_copy
+  2.27      0.00     0.00     0.00     0.00        6  <Class::Thread>#critical=
+  2.27      0.00     0.00     0.00     0.00      150  Hash#[]
+  2.27      0.00     0.00     0.00     0.00        4  Object#initialize
+  2.27      0.01     0.00     0.00     0.01      113  Enumerable#any?
+  2.27      0.00     0.00     0.00     0.00        1  ActionController::Session::AbstractStore::SessionHash#initialize
+  2.27      0.01     0.00     0.00     0.01        6  Enumerable#find
+  2.27      0.00     0.00     0.00     0.00      371  Regexp#match
+  2.27      0.00     0.00     0.00     0.00        1  <Object::ActionController::Routing::RouteSet>#recognize_optimized
+  2.27      0.00     0.00     0.00     0.00        1  Rack::Lint::InputWrapper#read
+  2.27      0.00     0.00     0.00     0.00       15  Array#empty?
+  2.27      0.00     0.00     0.00     0.00       39  String#==
+  2.27      0.00     0.00     0.00     0.00        4  ActionController::Request#request_method
+  2.27      0.00     0.00     0.00     0.00       74  Rack::Lint::Assertion#assert
+  2.27      0.00     0.00     0.00     0.00       55  Fixnum#+
+  2.27      0.00     0.00     0.00     0.00      329  <Class::Hash>#allocate
+  2.27      0.02     0.00     0.00     0.02        1  <Module::ActiveSupport::Deprecation>#silence
+  2.27      0.00     0.00     0.00     0.00        1  ActionController::RoutingError#initialize
+  2.27      0.00     0.00     0.00     0.00       19  Hash#delete
+  2.27      0.01     0.00     0.00     0.01        6  Array#map
+
+

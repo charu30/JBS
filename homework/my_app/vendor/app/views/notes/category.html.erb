@@ -1,0 +1,24 @@
+<!-- Author: Charu Jain
+Homework 6: Personal App
+Description: Display notes of a particular category
+Usage: Run http://localhost:3000/notes/category/JBS-homework
+
+-->
+
+
+<h1>Notes</h1>
+
+<% @notes.each do |note| %>
+ <p>
+  <!--Display the notes in a list-->  
+  <ul>
+    <li>
+	<%=h note.title %> 
+  	<%=h note.description %>
+	</li>
+</ul>
+</p>
+
+<% end %>
+
+ 

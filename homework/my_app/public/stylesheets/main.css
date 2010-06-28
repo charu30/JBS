@@ -5,6 +5,11 @@ Description: main.css to add style to front page
 Usage: Run http://localhost:3000/notes
 */
 
+
+div#user_nav { 
+float: right; font-size: 0.9em;
+ }
+
 body
 {
 background-color:azure;

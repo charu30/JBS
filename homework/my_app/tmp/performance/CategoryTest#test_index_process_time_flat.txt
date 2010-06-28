@@ -1,0 +1,36 @@
+Thread ID: 29942690
+Total: 0.035000
+
+ %self     total     self     wait    child    calls  name
+ 14.29      0.01     0.01     0.00     0.00     1549  Regexp#===
+  5.71      0.00     0.00     0.00     0.00       95  Rack::Lint::Assertion#assert
+  2.86      0.00     0.00     0.00     0.00       47  Hash#each
+  2.86      0.00     0.00     0.00     0.00        4  Module#extend_object
+  2.86      0.01     0.00     0.00     0.01       48  Array#each(d1)
+  2.86      0.00     0.00     0.00     0.00        1  ActionController::Session::AbstractStore::SessionHash#to_hash
+  2.86      0.00     0.00     0.00     0.00       37  <Module::ActiveSupport::Multibyte>#valid_character
+  2.86      0.00     0.00     0.00     0.00       68  String#split
+  2.86      0.00     0.00     0.00     0.00        2  ActionController::Request#method
+  2.86      0.00     0.00     0.00     0.00        7  Mime::Type::AcceptItem#initialize
+  2.86      0.00     0.00     0.00     0.00        6  ActionController::Base#url_for
+  2.86      0.02     0.00     0.00     0.02        2  ActionView::Base#render(d1)
+  2.86      0.00     0.00     0.00     0.00        4  ActionController::PolymorphicRoutes#build_named_route_call
+  2.86      0.00     0.00     0.00     0.00        4  Authlogic::ActsAsAuthentic::Base::Config#db_setup?
+  2.86      0.00     0.00     0.00     0.00        6  ActiveSupport::BufferedLogger#flush
+  2.86      0.03     0.00     0.00     0.03        1  ActiveRecord::QueryCache::ClassMethods#cache
+  2.86      0.00     0.00     0.00     0.00        1  ActionView::Base#view_paths=
+  2.86      0.03     0.00     0.00     0.03        1  Rack::Lint#_call
+  2.86      0.04     0.00     0.00     0.03        1  ActiveSupport::Testing::Performance::Profiler#run
+  2.86      0.00     0.00     0.00     0.00        5  IO#write
+  2.86      0.00     0.00     0.00     0.00        6  ActionView::Helpers::AssetTagHelper#expand_javascript_sources
+  2.86      0.00     0.00     0.00     0.00       27  Array#compact
+  2.86      0.00     0.00     0.00     0.00        2  <Class::File>#exist?
+  2.86      0.00     0.00     0.00     0.00       66  Kernel#hash
+  2.86      0.00     0.00     0.00     0.00        8  ActiveSupport::Callbacks::Callback#call
+  2.86      0.00     0.00     0.00     0.00        9  Hash#delete_if
+  2.86      0.01     0.00     0.00     0.00        9  Kernel#send(d4)
+  2.86      0.00     0.00     0.00     0.00       47  NilClass#to_s
+  2.86      0.00     0.00     0.00     0.00        1  SQLite3::Statement#initialize
+  2.86      0.00     0.00     0.00     0.00        4  ActionController::PolymorphicRoutes#polymorphic_url
+
+

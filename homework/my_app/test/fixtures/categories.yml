@@ -1,9 +1,9 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
 
 one:
-  name: MyString
-  description: MyString
+  name: Household
+  description: grocery stuff
 
 two:
-  name: MyString
-  description: MyString
+  name: personal
+  description: shopping, visiting friends

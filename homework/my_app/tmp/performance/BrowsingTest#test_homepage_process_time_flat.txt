@@ -1,0 +1,41 @@
+Thread ID: 29942690
+Total: 0.038000
+
+ %self     total     self     wait    child    calls  name
+  5.26      0.00     0.00     0.00     0.00      120  Kernel#is_a?
+  5.26      0.04     0.00     0.00     0.04        1  ActiveSupport::Testing::Performance::Profiler#run
+  5.26      0.00     0.00     0.00     0.00     1549  Regexp#===
+  2.63      0.00     0.00     0.00     0.00      106  String#downcase
+  2.63      0.01     0.00     0.00     0.01       48  Array#each(d1)
+  2.63      0.00     0.00     0.00     0.00       51  Array#each(d2)
+  2.63      0.00     0.00     0.00     0.00        1  <Class::ActiveRecord::ConnectionAdapters::AbstractAdapter>#checkin_callback_chain
+  2.63      0.00     0.00     0.00     0.00       47  String#blank?
+  2.63      0.00     0.00     0.00     0.00       95  Rack::Lint::Assertion#assert
+  2.63      0.00     0.00     0.00     0.00        4  Module#const_defined?
+  2.63      0.00     0.00     0.00     0.00       68  String#split
+  2.63      0.00     0.00     0.00     0.00      138  String#concat
+  2.63      0.00     0.00     0.00     0.00       16  <Object::Object>#[]
+  2.63      0.02     0.00     0.00     0.02        2  ActionView::Renderable#render_without_template_tracking
+  2.63      0.00     0.00     0.00     0.00        4  Authlogic::Session::Foundation::InstanceMethods#build_key
+  2.63      0.00     0.00     0.00     0.00        5  IO#write
+  2.63      0.00     0.00     0.00     0.00       51  Regexp#match
+  2.63      0.00     0.00     0.00     0.00        8  Mime::Type#==
+  2.63      0.00     0.00     0.00     0.00       14  ActionView::Helpers::AssetTagHelper#compute_public_path
+  2.63      0.00     0.00     0.00     0.00       23  Module#name
+  2.63      0.01     0.00     0.00     0.01        1  ActionView::Base::CompiledTemplates#_run_erb_app47views47categories47index46html46erb
+  2.63      0.00     0.00     0.00     0.00      213  Hash#[]=
+  2.63      0.01     0.00     0.00     0.01        9  Kernel#send(d4)
+  2.63      0.00     0.00     0.00     0.00       40  Fixnum#|
+  2.63      0.00     0.00     0.00     0.00       10  SQLite3::Driver::Native::Driver#column_type
+  2.63      0.00     0.00     0.00     0.00        1  I18n::Backend::Base#translations
+  2.63      0.00     0.00     0.00     0.00        6  ActionController::Routing::RouteSet#generate
+  2.63      0.00     0.00     0.00     0.00        2  ActionController::Filters::Filter#should_run_callback?
+  2.63      0.00     0.00     0.00     0.00       62  Kernel#class
+  2.63      0.00     0.00     0.00     0.00        1  SQLite3::ResultSet#commence
+  2.63      0.03     0.00     0.00     0.03       91  Proc#call
+  2.63      0.00     0.00     0.00     0.00       66  <Class::Thread>#current
+  2.63      0.00     0.00     0.00     0.00       90  Symbol#to_s
+  2.63      0.00     0.00     0.00     0.00       17  Rack::Utils::HeaderHash#[]
+  2.63      0.00     0.00     0.00     0.00        4  ActionController::PolymorphicRoutes#polymorphic_url
+
+

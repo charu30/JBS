@@ -1,3 +1,6 @@
+#Implementing auth-logic
+
 class User < ActiveRecord::Base
-  attr_accessible :usersname, :email_address, :password
+    #to add auth logic to the class
+	acts_as_authentic
 end

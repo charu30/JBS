@@ -1,0 +1,60 @@
+Thread ID: 29942690
+Total: 0.333000
+
+ %self     total     self     wait    child    calls  name
+ 26.43      0.09     0.09     0.00     0.00        1  ActionController::Response#each
+ 23.42      0.10     0.08     0.00     0.02     4704  Pathname#chop_basename
+  5.11      0.16     0.02     0.00     0.14      528  Pathname#cleanpath_aggressive
+  3.90      0.01     0.01     0.00     0.00     5233  Regexp#to_s
+  3.90      0.18     0.01     0.00     0.16      330  String#gsub
+  3.00      0.02     0.01     0.00     0.01     1600  Proc#call(d2)
+  2.70      0.05     0.01     0.00     0.04      809  Proc#call(d1)
+  2.10      0.02     0.01     0.00     0.01     1056  Pathname#initialize
+  1.80      0.01     0.01     0.00     0.00     1803  String#sub
+  1.80      0.01     0.01     0.00     0.00      528  Pathname#prepend_prefix
+  1.50      0.01     0.01     0.00     0.00      528  <Class::File>#join
+  1.50      0.01     0.01     0.00     0.00      374  Array#each(d2)
+  1.20      0.00     0.00     0.00     0.00     1067  Kernel#__send__(d2)
+  1.20      0.00     0.00     0.00     0.00     4176  String#rindex
+  1.20      0.01     0.00     0.00     0.00     8388  Kernel#===
+  1.20      0.00     0.00     0.00     0.00     4173  Array#unshift
+  1.20      0.00     0.00     0.00     0.00    12051  String#==
+  1.20      0.04     0.00     0.00     0.03      206  Array#each(d1)
+  0.90      0.00     0.00     0.00     0.00     2633  String#include?
+  0.90      0.00     0.00     0.00     0.00     4193  String#[]
+  0.90      0.05     0.00     0.00     0.05     1136  Class#new
+  0.60      0.00     0.00     0.00     0.00        6  IO#write
+  0.60      0.00     0.00     0.00     0.00       63  String#inspect
+  0.60      0.03     0.00     0.00     0.02       23  Array#map
+  0.60      0.00     0.00     0.00     0.00     1603  <Class::String>#allocate
+  0.60      0.00     0.00     0.00     0.00      135  Hash#default
+  0.60      0.00     0.00     0.00     0.00     1121  <Class::Object>#allocate
+  0.60      0.00     0.00     0.00     0.00     5233  <Class::File>#basename
+  0.60      0.00     0.00     0.00     0.00     4239  Array#[]
+  0.60      0.00     0.00     0.00     0.00     1585  String#initialize_copy
+  0.60      0.01     0.00     0.00     0.00     1593  Kernel#dup
+  0.30      0.00     0.00     0.00     0.00        3  Enumerable#sum
+  0.30      0.00     0.00     0.00     0.00      563  Kernel#class
+  0.30      0.00     0.00     0.00     0.00        1  Kernel#method_missing
+  0.30      0.18     0.00     0.00     0.17        9  Array#collect
+  0.30      0.18     0.00     0.00     0.18        2  ActionView::RenderablePartial#render
+  0.30      0.00     0.00     0.00     0.00     1146  Kernel#respond_to?
+  0.30      0.00     0.00     0.00     0.00        1  ActionController::Base#initialize_current_url
+  0.30      0.00     0.00     0.00     0.00       50  Array#<<
+  0.30      0.00     0.00     0.00     0.00       35  Kernel#kind_of?
+  0.30      0.00     0.00     0.00     0.00        3  <Module::I18n>#locale
+  0.30      0.00     0.00     0.00     0.00        6  ActiveSupport::BufferedLogger#add
+  0.30      0.05     0.00     0.00     0.05      344  Array#each
+  0.30      0.24     0.00     0.00     0.24       70  Proc#call
+  0.30      0.23     0.00     0.00     0.23        1  ActionController::Rescue#perform_action_without_flash
+  0.30      0.33     0.00     0.00     0.33        1  ActiveSupport::Testing::Performance::Profiler#run
+  0.30      0.00     0.00     0.00     0.00        5  SQLite3::Driver::Native::Driver#step
+  0.30      0.00     0.00     0.00     0.00        1  Module#append_features
+  0.30      0.00     0.00     0.00     0.00        1  ActionController::Response#charset=
+  0.30      0.00     0.00     0.00     0.00        5  Module#extend_object
+  0.30      0.00     0.00     0.00     0.00        6  SQLite3::Driver::Native::Driver#column_name
+  0.30      0.00     0.00     0.00     0.00      155  Regexp#===
+  0.30      0.00     0.00     0.00     0.00        4  Integer#times
+  0.30      0.00     0.00     0.00     0.00        2  ActiveRecord::ConnectionAdapters::QueryCache#cache_sql
+
+

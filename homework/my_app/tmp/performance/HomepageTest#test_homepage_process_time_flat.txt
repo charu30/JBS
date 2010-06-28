@@ -1,0 +1,42 @@
+Thread ID: 29942690
+Total: 0.043000
+
+ %self     total     self     wait    child    calls  name
+  6.98      0.00     0.00     0.00     0.00       68  String#split
+  6.98      0.00     0.00     0.00     0.00        1  Authlogic::Session::Params::InstanceMethods#persist_by_params
+  4.65      0.00     0.00     0.00     0.00       39  Class#inheritable_attributes
+  4.65      0.00     0.00     0.00     0.00       62  String#inspect
+  4.65      0.00     0.00     0.00     0.00       47  Hash#each
+  2.33      0.00     0.00     0.00     0.00        1  Module#blankslate_original_append_features
+  2.33      0.00     0.00     0.00     0.00       95  Rack::Lint::Assertion#assert
+  2.33      0.00     0.00     0.00     0.00        2  <Object::ActionController::Routing::Route>#generate_raw
+  2.33      0.00     0.00     0.00     0.00        8  <Class::ActiveSupport::Inflector::Inflections>#instance
+  2.33      0.00     0.00     0.00     0.00        7  Mime::Type::AcceptItem#initialize
+  2.33      0.00     0.00     0.00     0.00       74  String#gsub
+  2.33      0.00     0.00     0.00     0.00     1549  Regexp#===
+  2.33      0.00     0.00     0.00     0.00       24  Hash#each_pair
+  2.33      0.00     0.00     0.00     0.00       30  Array#include?
+  2.33      0.00     0.00     0.00     0.00       12  ActionView::Helpers::AssetTagHelper#javascript_src_tag
+  2.33      0.00     0.00     0.00     0.00        6  ActionView::PathSet#find_template
+  2.33      0.00     0.00     0.00     0.00      203  Hash#default
+  2.33      0.00     0.00     0.00     0.00       37  <Module::ActiveSupport::Multibyte>#valid_character
+  2.33      0.00     0.00     0.00     0.00        5  IO#write
+  2.33      0.00     0.00     0.00     0.00        6  ActionView::Helpers::AssetTagHelper#expand_javascript_sources
+  2.33      0.00     0.00     0.00     0.00      248  String#==
+  2.33      0.00     0.00     0.00     0.00      132  Hash#delete
+  2.33      0.00     0.00     0.00     0.00        1  SQLite3::Database#execute
+  2.33      0.00     0.00     0.00     0.00        2  <Class::File>#exist?
+  2.33      0.00     0.00     0.00     0.00       37  Enumerable#grep
+  2.33      0.00     0.00     0.00     0.00        9  ActiveSupport::CoreExtensions::Array::Access#second
+  2.33      0.00     0.00     0.00     0.00       59  Fixnum#+
+  2.33      0.00     0.00     0.00     0.00        1  <Object::ActionController::Routing::RouteSet>#recognize_optimized
+  2.33      0.00     0.00     0.00     0.00      548  Hash#[]
+  2.33      0.00     0.00     0.00     0.00        1  ActiveSupport::CoreExtensions::Time::Conversions#to_s
+  2.33      0.00     0.00     0.00     0.00       72  Kernel#==
+  2.33      0.00     0.00     0.00     0.00        1  HashWithIndifferentAccess#key?
+  2.33      0.00     0.00     0.00     0.00       43  Hash#merge
+  2.33      0.00     0.00     0.00     0.00        3  <Module::SQLite3::Driver::Native::API>#sqlite3_step
+  2.33      0.00     0.00     0.00     0.00        1  ActionController::Base#render_for_text
+  2.33      0.00     0.00     0.00     0.00        8  Rack::Utils::HeaderHash#[]=
+
+

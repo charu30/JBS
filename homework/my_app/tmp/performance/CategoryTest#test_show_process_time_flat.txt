@@ -1,0 +1,24 @@
+Thread ID: 29942690
+Total: 0.029000
+
+ %self     total     self     wait    child    calls  name
+ 17.24      0.01     0.01     0.00     0.00      107  Array#each(d1)
+ 13.79      0.02     0.00     0.00     0.02       70  Proc#call
+ 10.34      0.01     0.00     0.00     0.00       74  Rack::Lint::Assertion#assert
+  6.90      0.00     0.00     0.00     0.00        6  Array#map
+  6.90      0.03     0.00     0.00     0.03        1  ActiveSupport::Testing::Performance::Profiler#run
+  3.45      0.01     0.00     0.00     0.01      471  Proc#call(d1)
+  3.45      0.00     0.00     0.00     0.00      335  <Class::Hash>#allocate
+  3.45      0.00     0.00     0.00     0.00      326  Hash#merge
+  3.45      0.00     0.00     0.00     0.00        3  IO#write
+  3.45      0.00     0.00     0.00     0.00        1  ActionController::Rescue#rescue_action_locally
+  3.45      0.00     0.00     0.00     0.00        2  Rack::Utils::HeaderHash#include?
+  3.45      0.00     0.00     0.00     0.00      378  Regexp#match
+  3.45      0.00     0.00     0.00     0.00        4  Array#<<
+  3.45      0.00     0.00     0.00     0.00      150  Hash#[]
+  3.45      0.00     0.00     0.00     0.00        7  <Object::ActionController::Routing::Route>#recognize
+  3.45      0.00     0.00     0.00     0.00      342  String#sub
+  3.45      0.00     0.00     0.00     0.00      513  String#include?
+  3.45      0.00     0.00     0.00     0.00        1  ActionController::Request#template_format
+
+

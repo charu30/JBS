@@ -31,7 +31,8 @@ class CategoriesController < ApplicationController
       format.xml  { render :xml => @category }
     end
   end
-
+  
+   	
   # GET /categories/1/edit
   def edit
     @category = Category.find(params[:id])

@@ -1,0 +1,50 @@
+Thread ID: 29942690
+Total: 0.147000
+
+ %self     total     self     wait    child    calls  name
+ 30.61      0.06     0.04     0.00     0.01     3441  Pathname#chop_basename
+ 12.93      0.10     0.02     0.00     0.08      381  Pathname#cleanpath_aggressive
+  4.76      0.11     0.01     0.00     0.11      252  String#gsub
+  4.08      0.01     0.01     0.00     0.00     3823  Regexp#to_s
+  3.40      0.01     0.01     0.00     0.00      762  Pathname#initialize
+  2.72      0.01     0.00     0.00     0.00      381  Pathname#prepend_prefix
+  2.72      0.00     0.00     0.00     0.00     3075  String#[]
+  2.72      0.00     0.00     0.00     0.00      381  <Class::File>#join
+  2.04      0.01     0.00     0.00     0.01      598  Proc#call(d1)
+  2.04      0.00     0.00     0.00     0.00     1150  Kernel#dup
+  2.04      0.00     0.00     0.00     0.00     8846  String#==
+  2.04      0.00     0.00     0.00     0.00      438  String#sub
+  2.04      0.00     0.00     0.00     0.00     3060  String#rindex
+  1.36      0.01     0.00     0.00     0.00     6119  Kernel#===
+  1.36      0.00     0.00     0.00     0.00      252  Hash#[]
+  1.36      0.00     0.00     0.00     0.00      137  Array#each(d1)
+  1.36      0.00     0.00     0.00     0.00      381  Pathname#to_s
+  1.36      0.11     0.00     0.00     0.11        8  Array#collect
+  1.36      0.00     0.00     0.00     0.00        8  IO#write
+  1.36      0.00     0.00     0.00     0.00       67  String#inspect
+  0.68      0.00     0.00     0.00     0.00     3144  Array#[]
+  0.68      0.01     0.00     0.00     0.01      815  Class#new
+  0.68      0.00     0.00     0.00     0.00       99  String#=~
+  0.68      0.00     0.00     0.00     0.00      410  Kernel#class
+  0.68      0.00     0.00     0.00     0.00        1  ActionController::Request#content_type
+  0.68      0.15     0.00     0.00     0.15        1  ActiveSupport::Testing::Performance::Profiler#run
+  0.68      0.00     0.00     0.00     0.00     3822  <Class::File>#basename
+  0.68      0.00     0.00     0.00     0.00        1  Kernel#method_missing
+  0.68      0.00     0.00     0.00     0.00        1  ActionController::Dispatcher#flush_logger
+  0.68      0.00     0.00     0.00     0.00      387  String#+
+  0.68      0.00     0.00     0.00     0.00      399  Kernel#==
+  0.68      0.01     0.00     0.00     0.00        1  <Module::Benchmark>#realtime
+  0.68      0.01     0.00     0.00     0.01        7  Array#map
+  0.68      0.00     0.00     0.00     0.00      796  <Class::Object>#allocate
+  0.68      0.00     0.00     0.00     0.00     3057  Array#unshift
+  0.68      0.00     0.00     0.00     0.00        4  Array#+
+  0.68      0.14     0.00     0.00     0.14        1  ActionController::Session::CookieStore#call
+  0.68      0.00     0.00     0.00     0.00        5  Integer#to_i
+  0.68      0.00     0.00     0.00     0.00        1  Enumerable#grep
+  0.68      0.00     0.00     0.00     0.00      658  String#include?
+  0.68      0.00     0.00     0.00     0.00        1  <Object::ActionController::Routing::Route>#recognize
+  0.68      0.00     0.00     0.00     0.00        1  <Module::SQLite3::Driver::Native::API>#sqlite3_prepare
+  0.68      0.00     0.00     0.00     0.00        4  ActiveSupport::CoreExtensions::Hash::ReverseMerge#reverse_merge
+  0.68      0.00     0.00     0.00     0.00        1  ActionController::Base#log_processing_for_request_id
+
+

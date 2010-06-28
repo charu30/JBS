@@ -1,0 +1,35 @@
+<%= javascript_include_tag 'jquery' %>
+<%= javascript_include_tag :defaults %>
+<%= javascript_include_tag 'jrails' %>
+ 
+
+<h1>Listing categories</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+
+<% @categories.each do |category| %>
+  <tr>
+    <td><%=h category.name %></td>
+    <td><%=h category.description %></td>
+    <td><%= link_to 'Show', category %></td>
+    <td><%= link_to 'Edit', edit_category_path(category) %></td>
+    <td><%= link_to 'Destroy', category, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<div>
+<h2>Search Notes: </h2>
+Enter the category: 
+<label for="category">Category</label>
+<input type="text" id="category" name="m[category]" style="width:50%;"/>'
+<button id="execute-search"> Search </button>
+<div>
+
+<br />
+
+<%= link_to 'New category', new_category_path %>
