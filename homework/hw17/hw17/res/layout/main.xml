@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"     
+    >
+<TextView  
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="@string/hello"
+    />
+    
+    
+<TextView  
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="Add two integers"
+    />    
+    <TextView android:text="Enter an integer a:" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+
+	<EditText android:text="" android:id="@+id/aval"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></EditText>
+    
+    
+    <TextView android:text="Enter another integer b:"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+    
+	<EditText android:text="" android:id="@+id/bval"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></EditText>
+	
+	<TextView android:text="Result:" android:layout_width="wrap_content"
+		android:layout_height="wrap_content"></TextView>
+		
+	<EditText android:text="" android:id="@+id/resultText"
+		android:layout_width="wrap_content" android:layout_height="wrap_content" ></EditText>
+		
+	
+	
+	<Button android:text="Convert" android:id="@+id/find"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+</LinearLayout>
