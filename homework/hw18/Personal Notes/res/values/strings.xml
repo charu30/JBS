@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="main_title">Personal Notes</string>
+    <string name="app_name">Personal Notes</string>
+    <string name="my_label">Business notes</string>
+    <string name="exit_label">Exit</string>
+    <string name="new_label">New Note</string>
+    <string name="about_label">About Personal Notes</string>
+ 	<string name="about_text">
+ 	Personal Notes is an application where you can write any kind of notes - family, business, 
+ 	class etc. 
+ 	</string>
+ 	<string name="settings_label">Settings...</string>
+	<string name="settings_title">settings</string>
+	<string name="settings_shortcut">s</string>
+	<string name="option1_title">Coming soon...</string>
+	<string name="option1_summary">Some option</string>
+	
+</resources>
